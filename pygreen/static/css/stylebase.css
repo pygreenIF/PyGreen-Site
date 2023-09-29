@@ -8,6 +8,13 @@
     scroll-padding: 70px;
 }
 
+:root {
+    --clr-primary: #131313;
+    --clr-secondary: #272727;
+    --clr-accent-green: #00BB26;
+    --clr-accent-white: #FFFFFF
+}
+
 html {
     font-size: 10px;
 }
