@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    scroll-padding: 70px;
+}
+
+html {
+    font-size: 10px;
+}
