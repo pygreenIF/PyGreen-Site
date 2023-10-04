@@ -130,7 +130,7 @@ input {
 }
 
 .hero {
-    min-height: 950px;
+    min-height: 1080px;
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../resources/images/Background.png');
     background-repeat: no-repeat;
     background-size: cover;
