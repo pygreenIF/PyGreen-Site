@@ -9,7 +9,33 @@
     <link rel="stylesheet" href="..\static\css\stylebase.css">
     <title>Página Inicial | PyGreen</title>
 </head>
-<body>
+<body id="body">
+    <section id="login-screen" style="display: none;">
+        <div class="login-container">
+            <div class="modal-login">
+                <div class="title">
+                    <h1>ENTRAR NO UNIVERSO PY<span>GREEN</span></h1>
+                    <button id="close-login"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                
+                <div class="inputs">
+                    <input type="text" placeholder="usuário">
+                    <input class="password" type="password" placeholder="senha">
+                    <a class="forget-password" href="">esqueci minha senha</a>
+                </div>
+        
+                <div class="button-start">
+                    <a href=""><p>START</p><i class="fa-solid fa-play"></i></a>
+                </div>
+        
+                <div class="footer-login">
+                    <p>Não tem uma conta?</p>
+                    <a href="">Inscreva-se</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <header>
         <nav class="nav-bar">
             <div class="logo">
@@ -29,7 +55,20 @@
         </div>
     </header>
     <main>
+
+        <section class="hero" id="hero">
+            <div class="container-hero">
+                <img class="logo-paison" src="../static/resources/images/LogoPaison.png" alt="">
+                <h1>SEJA BEM-VINDO</h1>
+                <p>Neste mundo incrível de aventura e educação, evolua suas habilidades em programação com Python, encare grandes desafios e se torne o Dev Mestre que tem dentro de você.</p>
+                <a href="">Jogar agora</a>
+            </div>
+
+        </section>
+        <section></section>
+        <section></section>
     </main>
+
     <footer>
         <section id="footer-content">
             <div class="contact-container">
@@ -42,5 +81,8 @@
             <p>© 2023 Pygreen. Todos os direitos reservados.</p>
         </section>
     </footer>
+
+    <script src="https://kit.fontawesome.com/286fab062e.js" crossorigin="anonymous"></script>
+    <script src="../static/js/script.js"></script>
 </body>
 </html>
