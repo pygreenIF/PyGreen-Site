@@ -213,7 +213,7 @@ footer {
     
     .menu-button-mobile, .login-button-mobile{
         display: block;
-        color:#ffffff;
+        color:var(--clr-accent-white);
         border: none;
         background-color: transparent;
         font-size: 2.2rem;
