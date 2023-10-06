@@ -187,6 +187,10 @@ footer {
 }
 
 @media screen and (max-width: 1024px) {
+    header {
+        box-shadow: none;
+        border-bottom: 1px solid rgba(255,255,255, .1);
+    }
     .logo p {
         display: none;
     }
@@ -226,6 +230,7 @@ footer {
         width: 100%;
         background-color: var(--clr-primary);
         animation: slide-down 1s;
+        border-bottom: 1px solid rgba(255,255,255, .1);
     }
 
     @keyframes slide-down {
