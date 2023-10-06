@@ -7,6 +7,7 @@
         width: 80%;
         flex-direction: row;
         justify-content: space-between;
+        align-items: flex-start;
     }
 
     .top {
@@ -23,7 +24,6 @@
     .icon {
         display: inline;
         font-size: 1.5rem;
-        margin-bottom: 12%;
     }
 
     .icon i {

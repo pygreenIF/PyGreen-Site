@@ -163,7 +163,7 @@ footer {
 
 #footer-content {
     height: 350px;
-    margin-left: 122px;
+    margin-inline: 122px;
     display: flex;
     align-items: center; 
 }
@@ -172,7 +172,7 @@ footer {
     font-family: 'Press Start 2P';
     font-size: 3rem;
     border-bottom: 3px solid var(--clr-accent-white);
-    width: 300px;
+    width: auto;
 }
 
 #footer-content p {
