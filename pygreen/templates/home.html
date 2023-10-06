@@ -13,12 +13,12 @@
     <section id="login-screen" style="display: none;">
         <div class="login-container">
             <div class="modal-login">
-                <div class="title">
+                <div class="title-login">
                     <h1>ENTRAR NO UNIVERSO PY<span>GREEN</span></h1>
                     <button id="close-login"><i class="fa-solid fa-xmark"></i></button>
                 </div>
                 
-                <div class="inputs">
+                <div class="inputs-login">
                     <input type="text" placeholder="usuário">
                     <input class="password" type="password" placeholder="senha">
                     <a class="forget-password" href="">esqueci minha senha</a>
@@ -38,6 +38,9 @@
 
     <header>
         <nav class="nav-bar">
+            <div class="mobile-menu-icon">
+                <button onclick="showMenu()" class="menu-button-mobile"><i class="fa-solid fa-bars fa-xl"></i></button>
+            </div>
             <div class="logo">
                 <a href="">
                     <img src="..\static\resources\images\LogoPygreen.png" alt="logo pygreen">
@@ -52,6 +55,16 @@
                     <li class="nav-item"><button id="login-button">Entrar / Cadastrar</button></li>
                 </ul>
             </div>
+            <div class="mobile-login">
+                <button class="login-button-mobile"><i class="fa-solid fa-right-to-bracket icon fa-xl"></i></button>
+            </div>
+        </nav>
+        <div class="menu-mobile">
+            <ul>
+                <li class="nav-item"><a href="" class="nav-link">Trailer</a></li>
+                <li class="nav-item"><a href="" class="nav-link">Curso</a></li>
+                <li class="nav-item"><a href="" class="nav-link">Sobre</a></li>
+            </ul>
         </div>
     </header>
     <main>
@@ -59,18 +72,25 @@
         <section class="hero" id="hero">
             <div class="container-hero">
                 <img class="logo-paison" src="../static/resources/images/LogoPaison.png" alt="">
-                <h1>SEJA BEM-VINDO</h1>
-                <p>Neste mundo incrível de aventura e educação, evolua suas habilidades em programação com Python, encare grandes desafios e se torne o Dev Mestre que tem dentro de você.</p>
-                <a href="">Jogar agora</a>
+                <div class="text-hero">
+                    <h1>SEJA BEM-VINDO</h1>
+                    <p>Neste mundo incrível de aventura e educação, evolua suas habilidades em programação com Python, encare grandes desafios e se torne o Dev Mestre que tem dentro de você.</p>
+                    <a href="">Jogar agora</a>
+                </div>
             </div>
-
         </section>
         
         <section id="gallery-game">
 
         </section>
         
-        <section></section>
+        <section id="banner-trailer">
+            
+        </section>
+
+        <section class="trailer">
+
+        </section>
     </main>
 
     <footer>

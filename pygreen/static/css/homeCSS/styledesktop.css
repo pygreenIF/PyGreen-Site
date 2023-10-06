@@ -45,7 +45,7 @@
 .modal-login {
     width: 500px;
     height: 600px;
-    background-color: #131313;
+    background-color: var(--clr-primary);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,9 +54,9 @@
     border-radius: 20px;
 }
 
-.title {
+.title-login {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     width: 100%;
     padding-top: 40px;
     align-items: center;
@@ -71,28 +71,29 @@
 }
 
 i {
-    color: white;
+    color: var(--clr-accent-white);
     font-size: 2.5rem;
+    transition: .2s;
 }
 
-.title h1 {
+.title-login h1 {
     font-family: 'Press Start 2P';
-    font-size: 1.5rem;
-    color: white;
+    font-size: 1.3rem;
+    color: var(--clr-accent-white);
 }
 
-.title h1 span {
-    color: #00bb26;
+.title-login h1 span {
+    color: var(--clr-accent-green);
 }
 
-.inputs {
+.inputs-login {
     display: flex;
     flex-direction: column;
 }
 
-.inputs input {
+.inputs-login input {
     background-color: transparent;
-    color: white;
+    color: var(--clr-accent-white);
     width: 380px;
     height: 50px;
     font-size: 1.5rem;
@@ -102,17 +103,17 @@ i {
     outline: 0;
 }
 
-.inputs .password {
+.inputs-login .password {
     margin-top: 60px;
 }
 
-.inputs .forget-password {
-    color: white;
+.inputs-login .forget-password {
+    color: var(--clr-accent-white);
     text-decoration: none;
-    font-family: 'Bebas Neue';
+    font-family: 'Press Start 2P';
     margin-top: 10px;
-    width: 30%;
-    font-size: 1.5rem;
+    width: 52%;
+    font-size: 1.1rem;
 }
 
 .button-start a{
@@ -123,21 +124,20 @@ i {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    background-color: #ffffff;
-    color: #000000;
+    background-color: var(--clr-accent-white);
+    color: var(--clr-accent-black);
     font-family: 'Press Start 2P';
     font-size: 2rem;
     transition: .2s;
 }
 
-.button-start a p {
-    transition: .2s;
-}
-
 .button-start a i {
     display: none;
-    color: black;
-    transition: .2s;
+    color: var(--clr-accent-white);
+}
+
+.button-start a:hover {
+    background-color: var(--clr-accent-green);
 }
 
 .button-start a:hover i{
@@ -151,7 +151,7 @@ i {
 .footer-login {
     width: 500px;
     height: 100px;
-    background-color: #00bb26;
+    background-color: var(--clr-accent-green);
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -160,9 +160,9 @@ i {
 }
 
 .footer-login p {
-    color: white;
-    font-family: 'Bebas Neue';
-    font-size: 2rem;
+    color: var(--clr-accent-black);
+    font-family: 'Press Start 2P';
+    font-size: 1.1rem;
 }
 
 .footer-login a{
@@ -173,8 +173,8 @@ i {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    background-color: #ffffff;
-    color: #000000;
+    background-color: var(--clr-accent-white);
+    color: var(--clr-accent-black);
     font-family: 'Press Start 2P';
     font-size: 1rem;
 }
@@ -192,6 +192,12 @@ i {
     align-items: center;
     font-family: 'Press Start 2P';
     color: var(--clr-accent-white);
+}
+
+.text-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .container-hero h1 {
@@ -221,7 +227,6 @@ i {
 }
 
 .container-hero a:hover {
-    background-color: var(--clr-accent-black);
+    background-color: var(--clr-accent-green);
     color: var(--clr-accent-white);
-    transform: scale(1.1);
 }
