@@ -49,7 +49,7 @@
     display: flex;
     flex-direction: column;
     font-family: 'Press Start 2P';
-    margin-bottom: 8.1rem;
+    margin-bottom: 4.1rem;
     font-size: 1.2rem;
 }
 
@@ -64,7 +64,7 @@
     padding-block: 0;
 }
 
-.inputs button {
+.footing button {
     background-color: var(--clr-accent-green);
     color: var(--clr-accent-white);
     border: 0;
@@ -73,8 +73,6 @@
     width: 214px;
     height: 64px;
     border-radius: 1rem;
-    margin-inline: auto;
-    margin-top: 3.2rem;
 }
 
 .footing {
@@ -87,15 +85,5 @@
 }
 
 .footing a {
-    background-color: var(--clr-accent-white);
-    color: var(--clr-accent-black);
-    border-radius: 1rem ;
-    padding: 1.6rem 3.7rem;
-    transition: .2s;
     text-decoration: none;
-}
-
-.footing a:hover {
-    background-color: var(--clr-accent-green);
-    color: var(--clr-accent-white);
 }
