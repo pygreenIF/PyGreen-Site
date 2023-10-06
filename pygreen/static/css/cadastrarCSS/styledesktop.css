@@ -64,17 +64,6 @@
     padding-block: 0;
 }
 
-.footing button {
-    background-color: var(--clr-accent-green);
-    color: var(--clr-accent-white);
-    border: 0;
-    font-family: 'Press Start 2P';
-    font-size: 2rem;
-    width: 214px;
-    height: 64px;
-    border-radius: 1rem;
-}
-
 .footing {
     display: flex;
     justify-content: space-between;
@@ -86,4 +75,32 @@
 
 .footing a {
     text-decoration: none;
+    color: var(--clr-accent-white);
+}
+
+.footing a:visited {
+    text-decoration: none;
+    color: var(--clr-accent-white);
+}
+
+.footing button {
+    background-color: var(--clr-accent-green);
+    color: var(--clr-accent-white);
+    border: 0;
+    font-family: 'Press Start 2P';
+    font-size: 2rem;
+    width: 214px;
+    height: 64px;
+    border-radius: 1rem;
+    transition: .5ms;
+}
+
+.footing button:hover {
+    background-color: var(--clr-accent-white);
+    color: var(--clr-accent-black);
+    cursor: pointer;
+}
+
+.footing button:active {
+    transform: scale(.98);
 }
