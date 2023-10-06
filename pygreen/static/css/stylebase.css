@@ -179,6 +179,86 @@ footer {
 }
 
 @media screen and (max-width: 1024px) {
+    .logo p {
+        display: none;
+    }
+
+    .nav-bar > .nav-list {
+        display: none;
+    }
+
+    .mobile-menu-icon, .mobile-login {
+        display: block;
+    }
+    
+    .menu-button-mobile, .login-button-mobile{
+        display: block;
+        color:#ffffff;
+        border: none;
+        background-color: transparent;
+        font-size: 2.2rem;
+    }
+
+    .nav-bar {
+        display: flex;
+        justify-content: space-around !important;
+        width: 100% !important;
+        padding: 1.5rem 0rem !important;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .menu-mobile {
+        width: 100%;
+        background-color: var(--clr-primary);
+        animation: slide-down 1s;
+    }
+
+    @keyframes slide-down {
+        from {
+            margin-top: -400px;
+        }
+        to {
+            margin-top: 0;
+        }
+    }
+
+    @keyframes opacity-slide-down {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    .menu-mobile ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+        animation: opacity-slide-down 5s;
+    }
+
+    .menu-mobile .nav-item {
+        display: block;
+        padding: 1.2rem 0rem;
+    }
+    .menu-mobile .login-button {
+        display: block;
+        padding: 1rem 2rem;
+    }
+
+    .open {
+        display: block;
+    }
+
     footer {
         width: auto;
         display: flex;
