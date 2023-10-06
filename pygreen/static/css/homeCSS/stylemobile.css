@@ -1,3 +1,34 @@
-html {
-    font-size: 8px;
+@media screen and (max-width:1024px) {
+    html {
+        font-size: 8px;
+    }
+
+    .container-hero {
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo-paison {
+        display: none;
+    }
+
+    .text-hero {
+        gap: 2.5rem;
+    }
+
+    .text-hero a {
+        display: none;
+    }
+
+    .container-hero h1 {
+        text-align: center;
+        width: 90%;
+        font-size: 2.5rem;
+        margin-top: -35rem;
+    }
+
+    .container-hero p {
+        font-size: 2rem;
+        width: 80%;
+    }
 }
