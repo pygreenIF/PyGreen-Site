@@ -95,15 +95,10 @@
     width: 214px;
     height: 64px;
     border-radius: 1rem;
-    transition: .5ms;
 }
 
 .footing button:hover {
     background-color: var(--clr-accent-white);
     color: var(--clr-accent-black);
     cursor: pointer;
-}
-
-.footing button:active {
-    transform: scale(.98);
 }

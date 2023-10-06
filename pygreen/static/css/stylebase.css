@@ -29,6 +29,14 @@ header {
     position: sticky;
 }
 
+button {
+    transition: .5ms;
+}
+
+a:active, button:active {
+    transform: scale(.98);
+}
+
 .mobile-menu-icon, .mobile-login {
     display: none;
 }
