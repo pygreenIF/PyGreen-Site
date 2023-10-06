@@ -66,14 +66,13 @@
     justify-content: space-between;
     align-items: center;
     width: 540px;
-    height: 45px;
+    min-height: 120px;
     font-size: 1.4rem;
 }
 
 .footing a {
     text-decoration: none;
     color: var(--clr-accent-white);
-    margin-top: 2rem;
 }
 
 .footing a:visited {
@@ -82,8 +81,8 @@
 }
 
 .footing button {
-    background-color: var(--clr-accent-white);
-    color: var(--clr-accent-black);
+    background-color: var(--clr-accent-green);
+    color: var(--clr-accent-white);
     border: 0;
     font-family: 'Press Start 2P';
     font-size: 2rem;
@@ -91,7 +90,6 @@
     height: 64px;
     border-radius: 1rem;
     transition: .5ms;
-    margin-top: 3rem;
 }
 
 .footing button:hover {
