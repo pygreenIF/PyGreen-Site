@@ -56,12 +56,6 @@
     width: 450px;
 }
 
-.key-button-item{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .key-button-item button{
     width: 250px;
     height: 60px;
