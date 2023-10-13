@@ -25,10 +25,11 @@
                     <li class="nav-item"><a href="" class="nav-link">Trailer</a></li>
                     <li class="nav-item"><a href="" class="nav-link">Curso</a></li>
                     <li class="nav-item"><a href="" class="nav-link">Sobre</a></li>
+                    <li class="nav-item"><button id="login-button">Entrar / Cadastrar</button></li>
                 </ul>
             </div>
             <div class="mobile-login">
-                <button class="login-button-mobile"><i class="fa-solid fa-right-to-bracket icon fa-xl"></i></button>
+                <a href="/signin" class="login-button-mobile"><i class="fa-solid fa-right-to-bracket icon fa-xl"></i></a>
             </div>
         </nav>
         <div class="menu-mobile">
@@ -41,7 +42,28 @@
     </header>
 
     <main>
-        
+        <section class="hero">
+            <div class="key-container">
+                <div class="key-items">
+                    <div class="key-title-item">
+                        <i class="fa-solid fa-key"></i>
+                        <p>Chave de acesso</p>
+                    </div>
+                    <div class="key-input-item">
+                        <input type="text" placeholder="Chave" id="input-field">
+                    </div>
+                    <div class="key-button-item">
+                        <button>Vamo lá!</button>
+                    </div>                    
+                    <div class="key-subtitle-item">
+                        <p>A chave de acesso é exclusiva para alunos que estão cursando presencialmente.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="key-img">
+                <img src="../static/resources/images/aluno-key.png" alt="">
+            </div>
+        </section>
     </main>
 
     <footer>
