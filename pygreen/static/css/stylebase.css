@@ -27,6 +27,7 @@ header {
     font-family: 'Press Start 2P';
     top: 0;
     position: sticky;
+    z-index: 999;
 }
 
 .mobile-menu-icon, .mobile-login {

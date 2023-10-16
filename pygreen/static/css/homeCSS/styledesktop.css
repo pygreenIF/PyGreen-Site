@@ -230,3 +230,60 @@ i {
     background-color: var(--clr-accent-green);
     color: var(--clr-accent-white);
 }
+
+#banner-trailer {
+    min-height: 250px;
+    background: linear-gradient(45deg, rgba(0, 187, 38, .7), transparent), url('../../resources/images/bannerTrailer.png');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+}
+
+#banner-trailer h1, h2 {
+    font-family: 'Press Start 2P';
+    font-size: 4rem;
+    color: var(--clr-accent-white);
+    text-align: center;
+    z-index: 1;
+}
+
+#banner-trailer h2 {
+    font-size: 3.2rem;
+}
+
+#trailer {
+    background-color: var(--clr-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#trailer iframe {
+    width: 960px;
+    height: 540px;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    border: 5px solid green;
+    animation: animation 4s infinite alternate;
+    border-radius: 10px;
+}
+
+@keyframes animation {
+    0% {
+        border: 5px solid blue;
+    }
+    25% {
+        border: 5px solid lightskyblue;
+    }
+    50% {
+        border: 5px solid blueviolet;
+    }
+    75% {
+        border: 5px solid red;
+    }
+    100% {
+        border: 5px solid orange;
+    }
+}
