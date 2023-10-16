@@ -1,5 +1,11 @@
+.hero {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+
 .hero-heading {
-    width: 50%;
+    max-width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,19 +22,19 @@
     margin-bottom: 8rem;
     display: flex;
     justify-content: center;
-    width: 80%;
-    color: var(--clr-accent-green);
+    max-width: 80%;
+    color: var(--clr-accent-white);
     font-family: 'Press Start 2P';
     font-size: 4.2rem;
     text-transform: uppercase;
 }
 
 #hero-1 h1 span {
-    color: var(--clr-accent-white);
+    color: var(--clr-accent-green);
 }
 
 #hero-1 p {
-    width: 80%;
+    max-width: 80%;
     font-size: 2.2rem;
     font-family: 'Press Start 2P';
     color: var(--clr-accent-white);
@@ -43,8 +49,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 350px;
-    height: 80px;
+    padding: 1.6rem 2.1rem;
     background-color: var(--clr-accent-white);
     color: var(--clr-accent-black);
     font-family: 'Press Start 2P';
@@ -74,10 +79,10 @@
 #hero-2 {
     background-color: var(--clr-primary);
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .title-hero-2 {
-    height: 50%;
     width: 80%;
     display: flex;
 }
@@ -88,6 +93,7 @@
     font-family: 'Press Start 2P';
     font-size: 4.2rem;
     text-transform: uppercase;
+    height: auto;
 }
 
 .title-hero-2 h1 span {
@@ -95,7 +101,6 @@
 }
 
 .img-hero-2 {
-    height: 50%;
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -103,5 +108,5 @@
 }
 
 .img-hero-2 img {
-    height: 720px;
+    min-height: 820px;
 }
