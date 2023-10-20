@@ -1,0 +1,112 @@
+.hero {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+
+.hero-heading {
+    max-width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero-1 {
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+#hero-1 h1 {
+    margin-top: 9rem;
+    margin-bottom: 8rem;
+    display: flex;
+    justify-content: center;
+    max-width: 80%;
+    color: var(--clr-accent-white);
+    font-family: 'Press Start 2P';
+    font-size: 4.2rem;
+    text-transform: uppercase;
+}
+
+#hero-1 h1 span {
+    color: var(--clr-accent-green);
+}
+
+#hero-1 p {
+    max-width: 80%;
+    font-size: 2.2rem;
+    font-family: 'Press Start 2P';
+    color: var(--clr-accent-white);
+    text-indent: 5rem;
+}
+
+#hero-1 p span {
+    color: var(--clr-accent-green);
+}
+
+#hero-1 .button-course {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.6rem 2.1rem;
+    background-color: var(--clr-accent-white);
+    color: var(--clr-accent-black);
+    font-family: 'Press Start 2P';
+    font-size: 2.4rem;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+#hero-1 .button-course:hover {
+    background-color: var(--clr-accent-green);
+    color: var(--clr-accent-white);
+}
+
+#hero-1 .more-about {
+    text-decoration: none;
+    color: var(--clr-accent-white);
+    font-family: 'Press Start 2P';
+    font-size: 2rem;
+    transition: .5s;
+}
+
+#hero-1 .more-about:hover {
+    color: var(--clr-accent-green);
+}
+
+#hero-2 {
+    background-color: var(--clr-primary);
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title-hero-2 {
+    width: 80%;
+    display: flex;
+}
+
+.title-hero-2 h1 {
+    margin-top: 9rem;
+    color: var(--clr-accent-white);
+    font-family: 'Press Start 2P';
+    font-size: 4.2rem;
+    text-transform: uppercase;
+    height: auto;
+}
+
+.title-hero-2 h1 span {
+    color: var(--clr-accent-green);
+}
+
+.img-hero-2 {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.img-hero-2 img {
+    min-height: 820px;
+}

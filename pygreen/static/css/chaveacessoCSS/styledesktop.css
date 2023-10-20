@@ -1,0 +1,75 @@
+.key-container, .key-img {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 0 12rem;
+}
+
+.key-items {
+    margin-top: -10rem;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.key-img {
+    align-items: flex-end;
+}
+
+.key-img img {
+    height: 1060px;
+    margin-left: -15rem;
+}
+
+.key-title-item {
+    display: flex;
+    gap: 1rem;
+}
+
+.key-title-item i{
+    color: var(--clr-accent-green);
+    font-size: 3rem;
+}
+
+.key-title-item p {
+    font-size: 3rem;
+    font-family: 'Press Start 2P';
+    color: var(--clr-accent-white);
+}
+
+.key-input-item {
+    display: flex;
+}
+
+.key-input-item input{
+    margin-top: -4rem;
+    width: 420px;
+    height: 40px;
+    background-color: var(--clr-accent-white);
+    color: var(--clr-accent-black) !important;
+    border: 2px solid var(--clr-accent-green);
+    transition: width 0.2s;
+}
+
+.key-input-item input:focus {
+    width: 450px;
+}
+
+.key-button-item button{
+    width: 250px;
+    height: 60px;
+    background-color: var(--clr-accent-green);
+    color: var(--clr-accent-white);
+    font-family: 'Press Start 2P';
+    font-size: 2rem;
+    border: 0px;
+    border-radius: 10px;
+}
+
+.key-subtitle-item p{
+    font-family: 'Press Start 2P';
+    color: var(--clr-accent-white);
+    font-size: 1.5rem;
+    width: 85%;
+}

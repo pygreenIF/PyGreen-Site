@@ -5,14 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="..\static\css\cadastrarCSS\styledesktop.css">
+    <link rel="stylesheet" href="..\static\css\cadastrarCSS\stylemobile.css">
     <link rel="stylesheet" href="..\static\css\stylebase.css">
     <title>Cadastar-se | PyGreen</title>
 </head>
 <body>
     <header>
         <nav class="nav-bar">
+            <div class="mobile-menu-icon">
+                <button onclick="showMenu()" class="menu-button-mobile"><i class="fa-solid fa-bars fa-xl"></i></button>
+            </div>
             <div class="logo">
-                <a href="">
+                <a href="/">
                     <img src="..\static\resources\images\LogoPygreen.png" alt="logo pygreen">
                     <p>PYGREEN</p>
                 </a>
@@ -22,17 +26,29 @@
                     <li class="nav-item"><a href="" class="nav-link">Trailer</a></li>
                     <li class="nav-item"><a href="" class="nav-link">Curso</a></li>
                     <li class="nav-item"><a href="" class="nav-link">Sobre</a></li>
-                    <li class="nav-item"><button id="login-button">Entrar / Cadastrar</button></li>
                 </ul>
             </div>
+            <div class="mobile-login">
+                <button class="login-button-mobile"><i class="fa-solid fa-right-to-bracket icon fa-xl"></i></button>
+            </div>
+        </nav>
+        <div class="menu-mobile">
+            <ul>
+                <li class="nav-item"><a href="" class="nav-link">Trailer</a></li>
+                <li class="nav-item"><a href="" class="nav-link">Curso</a></li>
+                <li class="nav-item"><a href="" class="nav-link">Sobre</a></li>
+            </ul>
         </div>
     </header>
     <main>
         <section class="hero">
             <div class="container">
                 <div class="heading">
-                    <h1>PY<span>GREEN</span></h1>
-                    <p>CADASTRE-SE</p>
+                    <div class="top">
+                        <h1>PY<span>GREEN</span></span></h1>
+                        <p>CADASTRE-SE</p>
+                    </div>
+                    <span class="icon"><a href="/"><i class="fa-solid fa-xmark fa-2xl"></a></i>
                 </div>
                 <div class="inputs">
                     <p>Nome *</p>
@@ -45,7 +61,7 @@
                     <input type="text">
                 </div>
                 <div class="footing">
-                    <a href="/">Já tem uma conta?</a>
+                    <a href="/signin">Já tem uma conta?</a>
                     <button>Cadastrar</button>
                 </div>
             </div>
@@ -63,5 +79,7 @@
             <p>© 2023 Pygreen. Todos os direitos reservados.</p>
         </section>
     </footer>
+    <script src="https://kit.fontawesome.com/286fab062e.js" crossorigin="anonymous"></script>
+    <script src="../static/js/script.js"></script>
 </body>
 </html>

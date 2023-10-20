@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/stylebase.css">
-    <link rel="stylesheet" href="../static/css/cursoCSS/styledesktop.css">
-    <link rel="stylesheet" href="../static/css/cursoCSS/stylemobile.css">
-    <title>Curso | PyGreen</title>
+    <link rel="stylesheet" href="../static/css/loginMobileCSS/loginMobile.CSS">
+    <title>Login | PyGreen</title>
 </head>
 <body>
     <header>
@@ -16,7 +15,7 @@
                 <button onclick="showMenu()" class="menu-button-mobile"><i class="fa-solid fa-bars fa-xl"></i></button>
             </div>
             <div class="logo">
-                <a href="/">
+                <a href="">
                     <img src="..\static\resources\images\LogoPygreen.png" alt="logo pygreen">
                     <p>PYGREEN</p>
                 </a>
@@ -30,7 +29,7 @@
                 </ul>
             </div>
             <div class="mobile-login">
-                <a href="/signin" class="login-button-mobile"><i class="fa-solid fa-right-to-bracket icon fa-xl"></i></a>
+                <button class="login-button-mobile"><i class="fa-solid fa-right-to-bracket icon fa-xl"></i></button>
             </div>
         </nav>
         <div class="menu-mobile">
@@ -41,29 +40,29 @@
             </ul>
         </div>
     </header>
+
     <main>
         <section class="hero">
-            <div class="hero-heading" id="hero-1">
-                <h1>curso py<span>green</span></h1>
-                <p>Além de se tornar um Dev Mestre no <span>Paison Code</span>, os alunos do curso <span>PyGreen: Disseminando tecnologia</span> tem a oportunidade de terem aulas presenciais, podendo melhorar ainda mais suas habilidades, dentro e fora de jogo, podendo se tornar um <span>Dev Grão-Mestre</span>.</p>
-                <p>Caso não tenha acesso presencial ao curso, vídeos das aulas e de apoio serão disponibilizados na aba de <span>vídeos</span> do curso.</p>
-                <a class="button-course" href="">Acessar curso</a>
-                <a class="more-about" href="">conheça mais</a>
-            </div>
-            <div class="hero-heading" id="hero-2">
-                <div class="title-hero-2">
-                    <h1>seja <span>um</span> dev <span>Grão-Mestre</span></h1>
+            <div class="container">
+                <div class="heading">
+                    <div class="top">
+                        <h1>ENTRAR NO UNIVERSO PY<span>GREEN</span></span></h1>
+                    </div>
+                    <span class="icon"><a href="/"><i class="fa-solid fa-xmark fa-2xl"></a></i>
                 </div>
-                <div class="img-hero-2">
-                    <img src="../static/resources/images/DEV MESTRE.png" alt="">
-                </div>  
+                <div class="inputs">
+                    <input type="text" placeholder="usuário">
+                    <input class="password" type="password" placeholder="senha">
+                    <a class="forget-password" href="">esqueci minha senha</a>
+                </div>
+                <div class="footing">
+                    <a href="/signup">Não tem uma conta?</a>
+                    <button>Entrar</button>
+                </div>
             </div>
-        </section>
-
-        <section class="carousel">
-
         </section>
     </main>
+
     <footer>
         <section id="footer-content">
             <div class="contact-container">

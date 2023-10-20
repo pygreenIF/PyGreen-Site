@@ -1,8 +1,6 @@
-
 .hero {
     align-items: flex-start;
 }
-
 
 .container {
     display: flex;
@@ -20,12 +18,9 @@
     margin-top: 3rem;
 }
 
-.heading {
-    margin-block: 6rem 3.7rem;
-}
-
 
 .heading {
+    margin-block: 6rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,6 +34,10 @@
 .heading h1 {
     font-size: 3.9rem;
     margin-bottom: 1.4rem;
+}
+
+.icon {
+    display: none;
 }
 
 .heading p {
@@ -92,15 +91,10 @@
     width: 214px;
     height: 64px;
     border-radius: 1rem;
-    transition: .5ms;
 }
 
 .footing button:hover {
     background-color: var(--clr-accent-white);
     color: var(--clr-accent-black);
     cursor: pointer;
-}
-
-.footing button:active {
-    transform: scale(.98);
 }

@@ -13,3 +13,11 @@ def curso():
 @views.route('/signup')
 def signup():
     return render_template("signup.html")
+
+@views.route('/signin')
+def signin():
+    return render_template("loginMobile.html")
+
+@views.route('/chaveAcesso')
+def chaveAcesso():
+    return render_template("chaveAcesso.html")
