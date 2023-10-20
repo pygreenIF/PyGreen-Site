@@ -12,6 +12,7 @@
     --clr-accent-black: #000000;
     --clr-primary: #1b1e21;
     --clr-secondary: #222;
+    --clr-accent-footer: #272b30;
     --clr-accent-green: #00BB26;
     --clr-accent-white: #FFFFFF;
 }
@@ -158,7 +159,7 @@ input {
 footer {
     height: 400px;
     color: var(--clr-accent-white);
-    background-color: var(--clr-primary);
+    background-color: var(--clr-accent-footer);
 }
 
 #footer-content {
