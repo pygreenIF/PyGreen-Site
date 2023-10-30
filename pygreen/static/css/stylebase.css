@@ -38,6 +38,188 @@ a:active, button:active {
     transform: scale(.98);
 }
 
+
+.disable-scroll {
+    overflow-y: hidden;
+}
+
+#login-screen {
+    display: none;
+    min-height: 100%;
+    min-width: 100%;
+    opacity: 1;
+    position: fixed;
+    z-index: 1999;
+}
+
+.login-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1999;
+    opacity: 1;
+    animation: fade-in .5s forwards;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.modal-login {
+    width: 500px;
+    height: 600px;
+    background-color: var(--clr-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 0;
+    border-radius: 20px;
+}
+
+.title-login {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding-top: 40px;
+    align-items: center;
+}
+
+#close-login {
+    background-color: var(--clr-primary);
+    border: none;
+    cursor: pointer;
+    margin-bottom: 2px;
+    margin-left: 10px;
+}
+
+i {
+    color: var(--clr-accent-white);
+    font-size: 2.5rem;
+    transition: .2s;
+}
+
+.title-login h1 {
+    font-family: 'Press Start 2P';
+    font-size: 1.3rem;
+    color: var(--clr-accent-white);
+}
+
+.title-login h1 span {
+    color: var(--clr-accent-green);
+}
+
+.inputs-login {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs-login input {
+    background-color: transparent;
+    color: var(--clr-accent-white);
+    width: 380px;
+    height: 50px;
+    font-size: 1.5rem;
+    padding: 12px 16px 14px;
+    font-family: 'Press Start 2P';
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+.inputs-login .password {
+    margin-top: 60px;
+}
+
+.inputs-login .forget-password {
+    color: var(--clr-accent-white);
+    text-decoration: none;
+    font-family: 'Press Start 2P';
+    margin-top: 10px;
+    width: 52%;
+    font-size: 1.1rem;
+}
+
+.button-start a{
+    width: 150px;
+    height: 60px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--clr-accent-white);
+    color: var(--clr-accent-black);
+    font-family: 'Press Start 2P';
+    font-size: 2rem;
+    transition: .2s;
+}
+
+.button-start a i {
+    display: none;
+    color: var(--clr-accent-white);
+}
+
+.button-start a:hover {
+    background-color: var(--clr-accent-green);
+}
+
+.button-start a:hover i{
+    display: block;
+}
+
+.button-start a:hover p{
+    display: none;
+}
+
+.footer-login {
+    width: 500px;
+    height: 100px;
+    background-color: var(--clr-accent-green);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.footer-login p {
+    color: var(--clr-accent-black);
+    font-family: 'Press Start 2P';
+    font-size: 1.1rem;
+}
+
+.footer-login a{
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--clr-accent-white);
+    color: var(--clr-accent-black);
+    font-family: 'Press Start 2P';
+    font-size: 1rem;
+}
+
 .mobile-menu-icon, .mobile-login {
     display: none;
 }
