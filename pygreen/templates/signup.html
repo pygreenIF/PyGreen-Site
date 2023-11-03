@@ -1,85 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends "base.html" %}
+{% block static %}
     <link rel="stylesheet" href="..\static\css\cadastrarCSS\styledesktop.css">
     <link rel="stylesheet" href="..\static\css\cadastrarCSS\stylemobile.css">
     <link rel="stylesheet" href="..\static\css\stylebase.css">
-    <title>Cadastar-se | PyGreen</title>
-</head>
-<body>
-    <header>
-        <nav class="nav-bar">
-            <div class="mobile-menu-icon">
-                <button onclick="showMenu()" class="menu-button-mobile"><i class="fa-solid fa-bars fa-xl"></i></button>
+{% endblock static %}
+{% block content %}
+<section class="hero">
+    <div class="container">
+        <div class="heading">
+            <div class="top">
+                <h1>PY<span>GREEN</span></span></h1>
+                <p>CADASTRE-SE</p>
             </div>
-            <div class="logo">
-                <a href="/">
-                    <img src="..\static\resources\images\LogoPygreen.png" alt="logo pygreen">
-                    <p>PYGREEN</p>
-                </a>
-            </div>
-            <div class="nav-list">
-                <ul>
-                    <li class="nav-item"><a href="" class="nav-link">Trailer</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Curso</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Sobre</a></li>
-                </ul>
-            </div>
-            <div class="mobile-login">
-                <button class="login-button-mobile"><i class="fa-solid fa-right-to-bracket icon fa-xl"></i></button>
-            </div>
-        </nav>
-        <div class="menu-mobile">
-            <ul>
-                <li class="nav-item"><a href="" class="nav-link">Trailer</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Curso</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Sobre</a></li>
-            </ul>
+            <span class="icon"><a href="/"><i class="fa-solid fa-xmark fa-2xl"></a></i>
         </div>
-    </header>
-    <main>
-        <section class="hero">
-            <div class="container">
-                <div class="heading">
-                    <div class="top">
-                        <h1>PY<span>GREEN</span></span></h1>
-                        <p>CADASTRE-SE</p>
-                    </div>
-                    <span class="icon"><a href="/"><i class="fa-solid fa-xmark fa-2xl"></a></i>
-                </div>
-                <div class="inputs">
-                    <p>Nome *</p>
-                    <input type="text">
-                    <p>Sobrenome *</p>
-                    <input type="text">
-                    <p>Email *</p>
-                    <input type="email">
-                    <p>Senha *</p>
-                    <input type="text">
-                </div>
-                <div class="footing">
-                    <a href="/signin">Já tem uma conta?</a>
-                    <button>Cadastrar</button>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <section id="footer-content">
-            <div class="contact-container">
-                <h1>Contato</h1>
-                <p>pygreen2023@gmail.com</p>
-                <p>(84) XXXXX-XXXX</p>
-            </div>
-        </section>
-        <section id="copyright">
-            <p>© 2023 Pygreen. Todos os direitos reservados.</p>
-        </section>
-    </footer>
-    <script src="https://kit.fontawesome.com/286fab062e.js" crossorigin="anonymous"></script>
-    <script src="../static/js/script.js"></script>
-</body>
-</html>
+        <div class="inputs">
+            <p>Nome *</p>
+            <input type="text">
+            <p>Sobrenome *</p>
+            <input type="text">
+            <p>Email *</p>
+            <input type="email">
+            <p>Senha *</p>
+            <input type="text">
+        </div>
+        <div class="footing">
+            <a href="/signin">Já tem uma conta?</a>
+            <button>Cadastrar</button>
+        </div>
+    </div>
+</section>
+{% endblock content %}

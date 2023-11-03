@@ -1,83 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends "base.html" %}
+{% block static %}
     <link rel="stylesheet" href="../static/css/stylebase.css">
     <link rel="stylesheet" href="../static/css/cursoCSS/styledesktop.css">
     <link rel="stylesheet" href="../static/css/cursoCSS/stylemobile.css">
-    <title>Curso | PyGreen</title>
-</head>
-<body>
-    <header>
-        <nav class="nav-bar">
-            <div class="mobile-menu-icon">
-                <button onclick="showMenu()" class="menu-button-mobile"><i class="fa-solid fa-bars fa-xl"></i></button>
-            </div>
-            <div class="logo">
-                <a href="/">
-                    <img src="..\static\resources\images\LogoPygreen.png" alt="logo pygreen">
-                    <p>PYGREEN</p>
-                </a>
-            </div>
-            <div class="nav-list">
-                <ul>
-                    <li class="nav-item"><a href="" class="nav-link">Trailer</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Curso</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Sobre</a></li>
-                    <li class="nav-item"><button id="login-button">Entrar / Cadastrar</button></li>
-                </ul>
-            </div>
-            <div class="mobile-login">
-                <a href="/signin" class="login-button-mobile"><i class="fa-solid fa-right-to-bracket icon fa-xl"></i></a>
-            </div>
-        </nav>
-        <div class="menu-mobile">
-            <ul>
-                <li class="nav-item"><a href="" class="nav-link">Trailer</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Curso</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Sobre</a></li>
-            </ul>
+{% endblock static %}
+{% block content %}
+<section class="hero">
+    <div class="hero-heading" id="hero-1">
+        <h1>curso py<span>green</span></h1>
+        <p>Além de se tornar um Dev Mestre no <span>Paison Code</span>, os alunos do curso <span>PyGreen: Disseminando tecnologia</span> tem a oportunidade de terem aulas presenciais, podendo melhorar ainda mais suas habilidades, dentro e fora de jogo, podendo se tornar um <span>Dev Grão-Mestre</span>.</p>
+        <p>Caso não tenha acesso presencial ao curso, vídeos das aulas e de apoio serão disponibilizados na aba de <span>vídeos</span> do curso.</p>
+        <a class="button-course" href="">Acessar curso</a>
+        <a class="more-about" href="">conheça mais</a>
+    </div>
+    <div class="hero-heading" id="hero-2">
+        <div class="title-hero-2">
+            <h1>seja <span>um</span> dev <span>Grão-Mestre</span></h1>
         </div>
-    </header>
-    <main>
-        <section class="hero">
-            <div class="hero-heading" id="hero-1">
-                <h1>curso py<span>green</span></h1>
-                <p>Além de se tornar um Dev Mestre no <span>Paison Code</span>, os alunos do curso <span>PyGreen: Disseminando tecnologia</span> tem a oportunidade de terem aulas presenciais, podendo melhorar ainda mais suas habilidades, dentro e fora de jogo, podendo se tornar um <span>Dev Grão-Mestre</span>.</p>
-                <p>Caso não tenha acesso presencial ao curso, vídeos das aulas e de apoio serão disponibilizados na aba de <span>vídeos</span> do curso.</p>
-                <a class="button-course" href="">Acessar curso</a>
-                <a class="more-about" href="">conheça mais</a>
-            </div>
-            <div class="hero-heading" id="hero-2">
-                <div class="title-hero-2">
-                    <h1>seja <span>um</span> dev <span>Grão-Mestre</span></h1>
-                </div>
-                <div class="img-hero-2">
-                    <img src="../static/resources/images/DEV MESTRE.png" alt="">
-                </div>  
-            </div>
-        </section>
+        <div class="img-hero-2">
+            <img src="../static/resources/images/DEV MESTRE.png" alt="">
+        </div>  
+    </div>
+</section>
 
-        <section class="carousel">
+<section class="carousel">
 
-        </section>
-    </main>
-    <footer>
-        <section id="footer-content">
-            <div class="contact-container">
-                <h1>Contato</h1>
-                <p>pygreen2023@gmail.com</p>
-                <p>(84) XXXXX-XXXX</p>
-            </div>
-        </section>
-        <section id="copyright">
-            <p>© 2023 Pygreen. Todos os direitos reservados.</p>
-        </section>
-    </footer>
-
-    <script src="https://kit.fontawesome.com/286fab062e.js" crossorigin="anonymous"></script>
-    <script src="../static/js/script.js"></script>
-</body>
-</html>
+</section>
+{% endblock content %}

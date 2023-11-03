@@ -1,113 +1,29 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends "base.html" %}
+{% block static %}
     <link rel="stylesheet" href="..\static\css\homeCSS\styledesktop.css">
     <link rel="stylesheet" href="..\static\css\homeCSS\stylemobile.css">
     <link rel="stylesheet" href="..\static\css\stylebase.css">
-    <title>Página Inicial | PyGreen</title>
-</head>
-<body id="body">
-    <section id="login-screen" style="display: none;">
-        <div class="login-container">
-            <div class="modal-login">
-                <div class="title-login">
-                    <h1>ENTRAR NO UNIVERSO PY<span>GREEN</span></h1>
-                    <button id="close-login"><i class="fa-solid fa-xmark"></i></button>
-                </div>
-                
-                <div class="inputs-login">
-                    <input type="text" placeholder="usuário">
-                    <input class="password" type="password" placeholder="senha">
-                    <a class="forget-password" href="">esqueci minha senha</a>
-                </div>
-        
-                <div class="button-start">
-                    <a href=""><p>START</p><i class="fa-solid fa-play"></i></a>
-                </div>
-        
-                <div class="footer-login">
-                    <p>Não tem uma conta?</p>
-                    <a href="/signup">Inscreva-se</a>
-                </div>
+{% endblock static %}
+{% block content %}
+    <section class="hero" id="hero">
+        <div class="container-hero">
+            <img class="logo-paison" src="../static/resources/images/LogoPaison.png" alt="">
+            <div class="text-hero">
+                <h1>SEJA BEM-VINDO</h1>
+                <p>Neste mundo incrível de aventura e educação, evolua suas habilidades em programação com Python, encare grandes desafios e se torne o Dev Mestre que tem dentro de você.</p>
+                <a href="">Jogar agora</a>
             </div>
         </div>
     </section>
-
-    <header>
-        <nav class="nav-bar">
-            <div class="mobile-menu-icon">
-                <button onclick="showMenu()" class="menu-button-mobile"><i class="fa-solid fa-bars fa-xl"></i></button>
-            </div>
-            <div class="logo">
-                <a href="#hero">
-                    <img src="..\static\resources\images\LogoPygreen.png" alt="logo pygreen">
-                    <p>PYGREEN</p>
-                </a>
-            </div>
-            <div class="nav-list">
-                <ul>
-                    <li class="nav-item"><a href="#banner-trailer" class="nav-link">Trailer</a></li>
-                    <li class="nav-item"><a href="/curso" class="nav-link">Curso</a></li>
-                    <li class="nav-item"><a href="/sobre" class="nav-link">Sobre</a></li>
-                    <li class="nav-item"><button id="login-button">Entrar / Cadastrar</button></li>
-                </ul>
-            </div>
-            <div class="mobile-login">
-                <a href="/signin" class="login-button-mobile"><i class="fa-solid fa-right-to-bracket icon fa-xl"></i></a>
-            </div>
-        </nav>
-        <div class="menu-mobile">
-            <ul>
-                <li class="nav-item"><a href="" class="nav-link">Trailer</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Curso</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Sobre</a></li>
-            </ul>
-        </div>
-    </header>
-    <main>
-
-        <section class="hero" id="hero">
-            <div class="container-hero">
-                <img class="logo-paison" src="../static/resources/images/LogoPaison.png" alt="">
-                <div class="text-hero">
-                    <h1>SEJA BEM-VINDO</h1>
-                    <p>Neste mundo incrível de aventura e educação, evolua suas habilidades em programação com Python, encare grandes desafios e se torne o Dev Mestre que tem dentro de você.</p>
-                    <a href="">Jogar agora</a>
-                </div>
-            </div>
-        </section>
+    
+    <section id="gallery-game">
+    </section>
+    
+    <section id="banner-trailer">
         
-        <section id="gallery-game">
+    </section>
 
-        </section>
-        
-        <section id="banner-trailer">
-            <h1>PAISON CODE</h1>
-            <h2>TRAILER</h2>
-        </section>
+    <section class="trailer">
 
-        <section id="trailer">
-            <iframe width="1280" height="720" src="https://www.youtube.com/embed/raL1367FIl0" title="ONE PIECE: A Série | Trailer final | Netflix" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </section>
-    </main>
-
-    <footer>
-        <section id="footer-content">
-            <div class="contact-container">
-                <h1>Contato</h1>
-                <p>pygreen2023@gmail.com</p>
-                <p>(84) XXXXX-XXXX</p>
-            </div>
-        </section>
-        <section id="copyright">
-            <p>© 2023 Pygreen. Todos os direitos reservados.</p>
-        </section>
-    </footer>
-
-    <script src="https://kit.fontawesome.com/286fab062e.js" crossorigin="anonymous"></script>
-    <script src="../static/js/script.js"></script>
-</body>
-</html>
+    </section>
+{% endblock content %}
