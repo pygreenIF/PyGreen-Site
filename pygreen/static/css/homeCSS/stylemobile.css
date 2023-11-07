@@ -31,4 +31,30 @@
         font-size: 2rem;
         width: 80%;
     }
+
+    .carousel {
+        gap: 0;
+        padding-block: 12rem;
+    }
+
+    .on img{
+        border-radius: 2rem;
+    }
+
+    .carousel-button {
+        position: absolute;
+    }
+
+    .carousel-button-right {
+        right: 20px;
+    }
+    .carousel-button-left {
+        left: 20px;
+    }
+    .slide figcaption {
+        font-size: 2rem;
+        max-width: 90%;
+        margin-inline: auto;
+    }
+
 }
