@@ -231,6 +231,47 @@ i {
     color: var(--clr-accent-white);
 }
 
+.carousel {
+    background-color: var(--clr-primary);
+    display: flex;
+    gap: 2.6rem;
+    justify-content: center;
+    align-items: center;
+    padding-top: 13.2rem;
+    padding-bottom: 20.7rem;
+}
+
+.carousel-images {
+    display: flex;
+}
+
+.slide {
+    display: none;
+    text-align: center;
+}
+
+.slide img {
+    max-width: 100%;
+}
+
+.on {
+    display: block;
+}
+
+.slide figcaption {
+    color: var(--clr-accent-white);
+    font-family: 'Press Start 2P';
+    font-size: 3.2rem;
+    max-width: 930px;
+}
+
+.carousel-button {
+    border: none;
+    background-color: transparent;
+    height: 80px;
+    width: 50px;
+}
+
 #banner-trailer {
     min-height: 250px;
     background: linear-gradient(45deg, rgba(0, 187, 38, .7), transparent), url('../../resources/images/bannerTrailer.png');
