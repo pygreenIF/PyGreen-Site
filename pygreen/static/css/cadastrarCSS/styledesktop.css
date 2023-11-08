@@ -62,7 +62,7 @@
     background-color: var(--clr-primary);
     border: 0.1rem solid var(--clr-accent-white);
     color: var(--clr-accent-white);
-    margin: 1.2rem 0 2.4rem;
+    margin: 1.2rem 0 2.4rem !important;
     padding-block: 0;
 }
 
@@ -107,9 +107,15 @@
     display: none;
 }
 
-.on {
-    display: block;
+.form-signup {
+    margin-top: 3.7rem;
 }
+
+.on {
+    display: flex;
+    flex-direction: column;
+}
+
 .pfp-container {
     display: flex;
     justify-content: center;
@@ -129,7 +135,6 @@
 
 .form-profile {
     margin-top: 6.2rem;
-    display: flex;
     flex-direction: column;
     gap: 5rem;
 }
