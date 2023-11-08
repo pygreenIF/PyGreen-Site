@@ -1,6 +1,7 @@
 from pygreen import create_app
 from flask import redirect, request
 import mysql.connector
+from flask_hashing import Hashing
 
 app = create_app()
 
@@ -11,6 +12,9 @@ db = mysql.connector.connect(
     database='auth'
 )
 
+hashing = Hashing(app)
+
+
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
     email = request.form.get('email')
@@ -18,14 +22,18 @@ def signup():
     sobrenome = request.form.get('last-name')
     senha = request.form.get('password')
 
+    # Gere o hash da senha
+    hashed_password = hashing.hash_value(senha)
+    hashed_password = hashed_password[:16]
+
     cursor = db.cursor(dictionary=True)
     cursor.execute(f"SELECT * FROM Pessoa WHERE email='{email}'")
     fetchdata = cursor.fetchall()
 
-    if(fetchdata):
+    if fetchdata:
         raise Exception("Ei, deu erro... Já tem esse email ó")
     else:
-        post = f"INSERT INTO Pessoa (tipoID, email, nome, sobrenome, senha) VALUES (1, '{email}', '{nome}', '{sobrenome}', '{senha}')"
+        post = f"INSERT INTO Pessoa (tipoID, email, nome, sobrenome, senha) VALUES (1, '{email}', '{nome}', '{sobrenome}', '{hashed_password}')"
         cursor.execute(post)
         cursor.close()
         db.commit()
