@@ -28,6 +28,7 @@ header {
     font-family: 'Press Start 2P';
     top: 0;
     position: sticky;
+    z-index: 999;
 }
 
 button {
@@ -382,6 +383,10 @@ footer {
 #copyright p{
     font-family: 'Press Start 2P';
     font-size: 1rem;
+}
+
+.highlight-text {
+    color: var(--clr-accent-green);
 }
 
 @media screen and (max-width: 1024px) {

@@ -230,3 +230,103 @@ i {
     background-color: var(--clr-accent-green);
     color: var(--clr-accent-white);
 }
+
+.carousel {
+    background-color: var(--clr-primary);
+    display: flex;
+    gap: 2.6rem;
+    justify-content: center;
+    align-items: center;
+    padding-top: 13.2rem;
+    padding-bottom: 20.7rem;
+}
+
+.carousel-images {
+    display: flex;
+}
+
+.slide {
+    display: none;
+    text-align: center;
+}
+
+.slide img {
+    max-width: 100%;
+}
+
+.on {
+    display: block;
+}
+
+
+.slide figcaption {
+    color: var(--clr-accent-white);
+    font-family: 'Press Start 2P';
+    font-size: 3.2rem;
+    max-width: 1366px;
+    margin-top: -40px;
+}
+
+.carousel-button {
+    border: none;
+    background-color: transparent;
+    height: 80px;
+    width: 50px;
+}
+
+#banner-trailer {
+    min-height: 250px;
+    background: linear-gradient(45deg, rgba(0, 187, 38, .7), transparent), url('../../resources/images/bannerTrailer.png');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+}
+
+#banner-trailer h1, h2 {
+    font-family: 'Press Start 2P';
+    font-size: 4rem;
+    color: var(--clr-accent-white);
+    text-align: center;
+    z-index: 1;
+}
+
+#banner-trailer h2 {
+    font-size: 3.2rem;
+}
+
+#trailer {
+    background-color: var(--clr-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#trailer iframe {
+    width: 960px;
+    height: 540px;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    border: 5px solid green;
+    animation: animation 4s infinite alternate;
+    border-radius: 10px;
+}
+
+@keyframes animation {
+    0% {
+        border: 5px solid blue;
+    }
+    25% {
+        border: 5px solid lightskyblue;
+    }
+    50% {
+        border: 5px solid blueviolet;
+    }
+    75% {
+        border: 5px solid red;
+    }
+    100% {
+        border: 5px solid orange;
+    }
+}
