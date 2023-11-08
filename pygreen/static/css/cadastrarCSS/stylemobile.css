@@ -38,12 +38,17 @@
         box-shadow: none;
     }
 
+    .form-signup-profile {
+        width: 100%;
+    }
+
     .inputs {
         display: flex;
         align-items: center;
         flex-wrap: nowrap;
         width: 80%;
         margin-bottom: 0;
+        margin-inline: auto;
     }
 
     .inputs input {

@@ -18,13 +18,16 @@
     margin-top: 3rem;
 }
 
+.top {
+    text-align: center;
+}
 
 .heading {
     margin-block: 6rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 129px;
+    height: auto;
 }
 
 .heading span {
@@ -97,4 +100,50 @@
     background-color: var(--clr-accent-white);
     color: var(--clr-accent-black);
     cursor: pointer;
+}
+
+
+.form-signup-profile, .sub-title, .profile-picture {
+    display: none;
+}
+
+.on {
+    display: block;
+}
+.pfp-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-picture {
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+}
+
+.profile-picture.on {
+    height: 180px;
+    width: 180px;
+}
+
+.form-profile {
+    margin-top: 6.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.form-profile .inputs {
+    gap: 2.1rem;
+}
+
+.form-profile .inputs, input {
+    margin: 0 !important;
+}
+
+.form-profile .footing {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }

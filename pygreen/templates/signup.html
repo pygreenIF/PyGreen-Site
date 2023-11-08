@@ -10,11 +10,12 @@
         <div class="heading">
             <div class="top">
                 <h1>PY<span>GREEN</span></span></h1>
-                <p>CADASTRE-SE</p>
+                <p class="sub-title">CADASTRE-SE</p>
+                <p class="sub-title on">CRIE SEU PERFIL</p>
             </div>
             <span class="icon"><a href="/"><i class="fa-solid fa-xmark fa-2xl"></a></i>
         </div>
-        <form action="signup" method="post">
+        <form class="form-signup-profile on" action="signup" method="post">
             <div class="inputs">
                 <p>Nome *</p>
                 <input type="text" name="name">
@@ -25,10 +26,23 @@
                 <p>Senha *</p>
                 <input type="password" name="password">
             </div>
-        
             <div class="footing">
                 <a href="/signin">Já tem uma conta?</a>
                 <button type="submit" id="btn-registrar" value="registrar">Cadastrar</button>
+            </div>
+        </form>
+        <form class="form-signup-profile form-profile" action="signup" method="post">
+            <div class="pfp-container">
+                <img class="profile-picture" src="../static/resources/images/pixilart-sprite.png" alt="">
+                <img class="profile-picture on" src="../static/resources/images/pixilart-sprite.png" alt="">
+                <img class="profile-picture" src="../static/resources/images/pixilart-sprite.png" alt="">
+            </div>
+            <div class="inputs">
+                <p>Nome de usuário *</p>
+                <input type="text" name="username">
+            </div>
+            <div class="footing">
+                <button type="submit" id="btn-create-profile" value="Entrar">Entrar</button>
             </div>
         </form>
     </div>
