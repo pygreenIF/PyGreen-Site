@@ -16,6 +16,7 @@ def signup():
     nome = request.form.get('name')
     sobrenome = request.form.get('last-name')
     senha = request.form.get('password')
+    senha_hashed = hashing.hash_value(senha, salt='utf-8')
 
     cursor = db.cursor(dictionary=True)
     cursor.execute(f"SELECT * FROM Pessoa WHERE email='{email}'")
@@ -24,11 +25,15 @@ def signup():
     if(fetchdata):
         raise Exception("Ei, deu erro... Já tem esse email ó")
     else:
-        post = f"INSERT INTO Pessoa (tipoID, email, nome, sobrenome, senha) VALUES (1, '{email}', '{nome}', '{sobrenome}', '{senha}')"
+        post = f"INSERT INTO Pessoa (tipoID, email, nome, sobrenome, senha) VALUES (1, '{email}', '{nome}', '{sobrenome}', '{senha_hashed}')"
         cursor.execute(post)
         cursor.close()
         db.commit()
         return redirect('/')
+
+@auth.route("/<usuario>")
+def usuario(usuario):
+    return f"Salve, {usuario}!"
 
 @auth.route('/login', methods=['GET', 'POST'])
 def login():
@@ -40,7 +45,8 @@ def login():
     fetchdata = cursor.fetchall()
 
     if(fetchdata):
-        raise Exception("Ei, deu erro, esse usuario nem existe")
-    else:
         if(senha == cursor.execute(f"SELECT senha FROM Pessoa WHERE usuario='{usuario}'")):
-            return redirect(f'/signup')
+            return redirect(f'/{usuario}')
+    else:
+        raise Exception("Ei, deu erro, esse usuario nem existe")
+
