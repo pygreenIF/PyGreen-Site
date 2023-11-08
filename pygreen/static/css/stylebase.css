@@ -158,7 +158,13 @@ i {
     font-size: 1.1rem;
 }
 
-.button-start a{
+.button-start {
+    display: flex;
+    justify-content: center;
+    margin-top: 3.5rem;
+}
+
+.button-start button{
     width: 150px;
     height: 60px;
     border-radius: 10px;
@@ -171,22 +177,23 @@ i {
     font-family: 'Press Start 2P';
     font-size: 2rem;
     transition: .2s;
+    border: none;
 }
 
-.button-start a i {
+.button-start button i {
     display: none;
     color: var(--clr-accent-white);
 }
 
-.button-start a:hover {
+.button-start button:hover {
     background-color: var(--clr-accent-green);
 }
 
-.button-start a:hover i{
+.button-start button:hover i{
     display: block;
 }
 
-.button-start a:hover p{
+.button-start button:hover p{
     display: none;
 }
 
