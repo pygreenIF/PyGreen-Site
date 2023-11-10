@@ -1,0 +1,20 @@
+{% extends "forms.html" %}
+{% block sub_title %}
+<p id="sub-title-profile" class="sub-title on">CRIE SEU PERFIL</p>
+{% endblock sub_title %}
+{% block forms %}
+        <form id="form-profile" class="form-signup-profile form-profile" action="signup" method="post">
+            <div class="pfp-container">
+                <img class="profile-picture" src="../static/resources/images/pixilart-sprite.png" alt="">
+                <img class="profile-picture on" src="../static/resources/images/pixilart-sprite.png" alt="">
+                <img class="profile-picture" src="../static/resources/images/pixilart-sprite.png" alt="">
+            </div>
+            <div class="inputs">
+                <p>Nome de usuário *</p>
+                <input type="text" name="username">
+            </div>
+            <div class="footing">
+                <button type="submit" id="btn-create-profile" value="Entrar">Entrar</button>
+            </div>
+        </form>
+{% endblock forms %}
