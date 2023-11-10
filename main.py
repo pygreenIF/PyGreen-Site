@@ -22,7 +22,6 @@ def signup():
     sobrenome = request.form.get('last-name')
     senha = request.form.get('password')
 
-    # Gere o hash da senha
     hashed_password = hashing.hash_value(senha)
     hashed_password = hashed_password[:16]
 
@@ -47,15 +46,22 @@ def usuario(usuario):
 def login():
     usuario = request.form.get('usuario')
     senha = request.form.get('password')
-
+    
     cursor = db.cursor(dictionary=True)
     cursor.execute(f"SELECT * FROM Pessoa WHERE usuario='{usuario}'")
     fetchdata = cursor.fetchall()
-
+    
+    hashed_password = hashing.hash_value(senha)
+    hashed_password = hashed_password[:16]
+    
+    cursor.execute(f"SELECT senha FROM Pessoa WHERE usuario='{usuario}'")
+    fetchdata2 = cursor.fetchall()
+    
     if(fetchdata):
-        if(senha == cursor.execute(f"SELECT senha FROM Pessoa WHERE usuario='{usuario}'")):
+        if(hashed_password == fetchdata2[0]["senha"]):
             return redirect(f'/{usuario}')
     else:
+        print('nao foi')
         raise Exception("Ei, deu erro, esse usuario nem existe")
 
 if __name__ == '__main__':

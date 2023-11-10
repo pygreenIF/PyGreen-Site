@@ -131,6 +131,8 @@ i {
 .inputs-login {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .inputs-login input {
@@ -161,7 +163,7 @@ i {
 .button-start {
     display: flex;
     justify-content: center;
-    margin-top: 3.5rem;
+    margin: 3.5rem 0rem;
 }
 
 .button-start button{
