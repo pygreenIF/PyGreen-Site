@@ -1,5 +1,5 @@
 from pygreen import create_app
-from flask import redirect, request
+from flask import redirect, request, render_template
 import mysql.connector
 from flask_hashing import Hashing
 
@@ -40,7 +40,13 @@ def signup():
 
 @app.route("/<usuario>")
 def usuario(usuario):
-    return f"Salve, {usuario}!"
+    
+    cursor = db.cursor(dictionary=True)
+    cursor.execute(f"SELECT nome FROM Pessoa WHERE usuario='{usuario}'")
+    fetchdata = cursor.fetchall()
+    nome = fetchdata[0]['nome']
+    
+    return render_template('perfilUsuario.html', usuario = usuario, nome=nome)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():

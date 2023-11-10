@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block static %}
+<link rel="stylesheet" href="../static/css/perfiluserCSS/styledesktop.css">
+<link rel="stylesheet" href="../static/css/perfiluserCSS/stylemobile.css">
+<link rel="stylesheet" href="../static/css/stylebase.css">
+<title>{{ nome }} (@{{ usuario }}) | PyGreen</title>
+{% endblock static %}
+
+{% block content %}
+<section id="perfil">
+    <div class="perfil-container">
+        <h1>Oi {{ nome }} vulgo {{ usuario }} </h1>
+    </div>
+</section>
+{% endblock content %}

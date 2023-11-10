@@ -1,0 +1,12 @@
+#perfil {
+    background-color: var(--clr-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.perfil-container {
+    max-width: 1660px;
+    max-height: 900px;
+    border: var(--clr-accent-green) solid 1px;
+}
