@@ -111,6 +111,29 @@
     margin-top: 3.7rem;
 }
 
+.form-signup .password-input {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.form-signup .password-input input {
+    position: relative !important;
+    z-index: 1;
+}
+
+.form-signup .password-input #eye-button {
+    position: relative !important;
+    margin-top: -1.5rem;
+    z-index: 2;
+}
+
+.password-input button .close{
+    display: none !important;
+}
+
+.password-input button .open{
+    display: block !important;
+}
+
 .on {
     display: flex;
     flex-direction: column;

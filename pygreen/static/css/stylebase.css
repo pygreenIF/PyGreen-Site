@@ -160,6 +160,28 @@ i {
     font-size: 1.1rem;
 }
 
+.password-input input {
+    position: relative;
+    z-index: 1;
+}
+
+.password-input button {
+    background-color: transparent;
+    border: 0;
+    position: absolute;
+    margin-top: 9rem;
+    margin-left: -5rem;
+    z-index: 2;
+}
+
+.password-input button .close{
+    display: none;
+}
+
+.password-input button .open{
+    display: block;
+}
+
 .button-start {
     display: flex;
     justify-content: center;

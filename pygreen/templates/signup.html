@@ -24,7 +24,10 @@
                 <p>Email *</p>
                 <input type="email" name="email">
                 <p>Senha *</p>
-                <input type="password" name="password">
+                <div class="password-input">
+                    <input class="password" maxlength="16" type="password" name="password">
+                    <button type="button" id="eye-button" onclick="showPassword()"><i class="fa-regular fa-eye open"></i><i class="fa-regular fa-eye-slash close"></i></button>
+                </div>
             </div>
             <div class="footing">
                 <a href="/signin">Já tem uma conta?</a>
@@ -47,4 +50,7 @@
         </form>
     </div>
 </section>
+
+<script src="https://kit.fontawesome.com/286fab062e.js" crossorigin="anonymous"></script>
+<script src="../static/js/script.js"></script>
 {% endblock content %}

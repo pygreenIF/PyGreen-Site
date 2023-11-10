@@ -69,3 +69,59 @@ function showMenu() {
         // document.querySelector('.icon')= <i class="fa-solid fa-xmark"></i>;
     }
 }
+
+
+var inputLogin = document.querySelector(".password");
+var eye = document.querySelector(".fa-eye");
+var eyeSlash = document.querySelector(".fa-eye-slash");
+var inputSignup = document.querySelector(".password-signup")
+var eye2 = document.querySelector(".signup1");
+var eyeSlash2 = document.querySelector(".signup2");
+
+function showPassword() {
+    if(eye.classList.contains('open')) {
+        eye.classList.remove('open')
+        eye.classList.add('close')
+        inputLogin.type = 'text';
+    }
+    else {
+        eye.classList.add('open')
+        eye.classList.remove('close')
+        inputLogin.type = 'password';
+    }
+
+    if(eyeSlash.classList.contains('open')) {
+        eyeSlash.classList.remove('open')
+        eyeSlash.classList.add('close')
+        inputLogin.type = 'password';
+    }
+    else {
+        eyeSlash.classList.add('open')
+        eyeSlash.classList.remove('close')
+        inputLogin.type = 'text';
+    }
+}
+
+function showPassword() {
+    if(eye2.classList.contains('open')) {
+        eye2.classList.remove('open')
+        eye2.classList.add('close')
+        inputSignup.type = 'text';
+    }
+    else {
+        eye2.classList.add('open')
+        eye2.classList.remove('close')
+        inputSignup.type = 'password';
+    }
+
+    if(eyeSlash2.classList.contains('open')) {
+        eyeSlash2.classList.remove('open')
+        eyeSlash2.classList.add('close')
+        inputSignup.type = 'password';
+    }
+    else {
+        eyeSlash2.classList.add('open')
+        eyeSlash2.classList.remove('close')
+        inputSignup.type = 'text';
+    }
+}
