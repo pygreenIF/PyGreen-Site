@@ -58,7 +58,12 @@ def usuario(usuario):
     fetchdata = cursor.fetchall()
     nome = fetchdata[0]['nome']
     
-    return render_template('perfilUsuario.html', usuario = usuario, nome=nome)
+    cursor2 = db.cursor(dictionary=True)
+    cursor2.execute(f"SELECT pessoaID FROM Pessoa WHERE usuario='{usuario}'")
+    fetchdata2 = cursor2.fetchall()
+    pessoaID = fetchdata2[0]['pessoaID']
+    
+    return render_template('perfilUsuario.html', usuario = usuario, nome=nome, pessoaID=pessoaID)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
