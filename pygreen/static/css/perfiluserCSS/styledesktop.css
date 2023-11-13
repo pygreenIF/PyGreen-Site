@@ -1,12 +1,103 @@
 #perfil {
-    background-color: var(--clr-secondary);
+    background-color: var(--clr-primary);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .perfil-container {
-    max-width: 1660px;
-    max-height: 900px;
-    border: var(--clr-accent-green) solid 1px;
+    width: 1620px;
+    height: 820px;
+    flex-shrink: 1;
+    border: var(--clr-accent-green) solid 5px;
+    border-radius: 1rem;
+    margin-top: 4rem;
+    margin-bottom: 8rem;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 15px 15px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.header-profile h1{
+    font-family: 'Press Start 2P';
+    color: var(--clr-accent-white);
+    font-size: 3rem;
+    margin: 32px;
+}
+
+.content-profile{
+    font-family: 'Press Start 2P';
+    color: var(--clr-accent-white);
+    margin: 0px 5rem;
+    display: flex;
+}
+
+.content-profile h1{
+    font-size: 2.5rem;
+}
+
+.content-profile h3 {
+    font-size: 1.5rem;
+}
+
+.infos-user {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+.infos-user img {
+    border-radius: 50%;
+}
+
+.topics-user {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.topics-user .title-progress {
+    margin-top: 3rem;
+}
+
+.topics-user table{
+    width: 930px;
+    flex-shrink: 1;
+    margin-inline: auto;
+}
+
+.topics-user table th {
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.topics-user table td {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.footer-profile {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer-profile a {
+    text-decoration: none;
+}
+
+.edit-profile {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: var(--clr-accent-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 32px;
 }

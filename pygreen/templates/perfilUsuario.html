@@ -9,7 +9,47 @@
 {% block content %}
 <section id="perfil">
     <div class="perfil-container">
-        <h1>Oi {{ nome }} vulgo {{ usuario }} </h1>
+        <div class="header-profile">
+            <h1>Perfil</h1>
+        </div>
+        <div class="content-profile">
+            <div class="infos-user">
+                <h1>Nível 1</h1>
+                <img src="../static/resources/images/foto-perfil.png" alt="">
+                <h1>{{ nome }}</h1>
+                <h3>@{{ usuario }}</h3>
+                <h3>ID: {{ pessoaID }}</h3>
+                <div class="bio-user">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, consequatur soluta. Consequatur inventore deserunt tempore est doloremque officia sint veritatis?</p>
+                </div>
+            </div>
+            <div class="topics-user">
+                <h1 class="title-badges">Insígnias</h1>
+                <div class="badges">
+                    <img src="../static/resources/images/insigniaPrata.png" alt="">
+                    <img src="../static/resources/images/insigniaOuro.png" alt="">
+                </div>
+                <h1 class="title-progress">Progresso no jogo</h1>
+                <table>
+                    <tr>
+                        <th class="name-column" style="color: var(--clr-accent-green);">Nome</th>
+                        <th class="resolution-column" style="color: var(--clr-accent-green);">Resolução</th>
+                    </tr>
+                    <tr>
+                        <td class="left-column">Abrir porta</td>
+                        <td class="right-column">Feito</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="footer-profile">
+            <a href="/edit-profile">
+                <div class="edit-profile">
+                    
+                    <i class="fa-solid fa-user-pen"></i>
+                </div>
+            </a>
+        </div>
     </div>
 </section>
 {% endblock content %}
