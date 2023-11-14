@@ -1,0 +1,29 @@
+.not-found {
+    background-image: url(../../resources/images/backgroundNotFound.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 1010px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.not-found h1, h2 {
+    text-align: center;
+    font-family: 'Press Start 2P';
+}
+
+.not-found h1 {
+    color: var(--clr-accent-red);
+    font-size: 6.4rem;
+}
+
+.not-found h2 {
+    color: var(--clr-accent-black);
+    font-size: 4rem;
+}
+
+.not-found img {
+    max-width: 100%;
+}

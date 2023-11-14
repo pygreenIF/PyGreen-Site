@@ -50,20 +50,19 @@ def profile():
     return redirect('/')
 
 
-@app.route("/<usuario>")
+@app.route("/user/<usuario>")
 def usuario(usuario):
     
     cursor = db.cursor(dictionary=True)
-    cursor.execute(f"SELECT nome FROM Pessoa WHERE usuario='{usuario}'")
+    cursor.execute(f"SELECT * FROM Pessoa WHERE usuario='{usuario}'")
     fetchdata = cursor.fetchall()
-    nome = fetchdata[0]['nome']
-    
-    cursor2 = db.cursor(dictionary=True)
-    cursor2.execute(f"SELECT pessoaID FROM Pessoa WHERE usuario='{usuario}'")
-    fetchdata2 = cursor2.fetchall()
-    pessoaID = fetchdata2[0]['pessoaID']
-    
-    return render_template('perfilUsuario.html', usuario = usuario, nome=nome, pessoaID=pessoaID)
+    try:
+        nome = fetchdata[0]['nome']
+        pessoaID = fetchdata[0]['pessoaID']
+        sobrenome = fetchdata[0]['sobrenome']
+    except:
+           render_template('404.html')
+    return render_template('perfilUsuario.html', usuario = usuario, nome=nome, pessoaID=pessoaID, sobrenome=sobrenome)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -86,6 +85,10 @@ def login():
     else:
         print('nao foi')
         raise Exception("Ei, deu erro, esse usuario nem existe")
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
 
 if __name__ == '__main__':
     app.run(debug=True)
