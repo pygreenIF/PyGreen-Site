@@ -21,6 +21,7 @@ def signup():
     nome = request.form.get('name')
     sobrenome = request.form.get('last-name')
     senha = request.form.get('password')
+    usuario = request.form.get('username')
 
     hashed_password = hashing.hash_value(senha)
     hashed_password = hashed_password[:16]
@@ -32,22 +33,11 @@ def signup():
     if fetchdata:
         raise Exception("Ei, deu erro... Já tem esse email ó")
     else:
-        return redirect(url_for("profile", email=email, nome=nome, sobrenome=sobrenome, hashed_password=hashed_password))
-
-@app.route('/profile', methods=['GET','POST'])
-def profile():
-    cursor = db.cursor(dictionary=True) 
-    email = request.args.get('email')
-    nome = request.args.get('nome')
-    sobrenome = request.args.get('sobrenome')
-    hashed_password = request.args.get('hashed_password')
-
-    post = f"INSERT INTO Pessoa (tipoID, email, nome, sobrenome, senha) VALUES (1, '{email}', '{nome}', '{sobrenome}', '{hashed_password}')"
-
-    cursor.execute(post)
-    cursor.close()
-    db.commit()
-    return redirect('/')
+        post = f"INSERT INTO Pessoa (tipoID, email, nome, sobrenome, senha, usuario) VALUES (1, '{email}', '{nome}', '{sobrenome}', '{hashed_password}', '{usuario}')"
+        cursor.execute(post)
+        cursor.close()
+        db.commit()
+        return redirect("/")
 
 
 @app.route("/<usuario>")
