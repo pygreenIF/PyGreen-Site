@@ -21,7 +21,3 @@ def signin():
 @views.route('/chaveAcesso')
 def chaveAcesso():
     return render_template("chaveAcesso.html", title="Chave de acesso")
-
-@views.route('/profile')
-def profile():
-    return render_template("perfilEdit.html", title="Cadastrar-se")
