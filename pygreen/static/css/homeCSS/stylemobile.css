@@ -9,7 +9,7 @@
     }
 
     .logo-paison {
-        display: none;
+        margin-top: -1  0rem !important;
     }
 
     .text-hero {
@@ -24,7 +24,6 @@
         text-align: center;
         width: 90%;
         font-size: 2.5rem;
-        margin-top: -35rem;
     }
 
     .container-hero p {

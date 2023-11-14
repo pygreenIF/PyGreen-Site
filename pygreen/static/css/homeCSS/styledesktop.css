@@ -180,9 +180,8 @@ i {
 }
 
 #hero .logo-paison {
-    width: 600px;
-    height: 800px;
-    margin-top: -50px;
+    max-width: 100%;
+    margin-top: 8rem;
 }
 
 #hero .container-hero {
@@ -202,7 +201,7 @@ i {
 
 .container-hero h1 {
     font-size: 4.8rem;
-    margin-top: -250px;
+    margin-top: 2rem;
 }
 
 .container-hero p {

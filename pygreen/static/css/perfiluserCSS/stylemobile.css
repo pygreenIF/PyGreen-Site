@@ -5,9 +5,9 @@
     }
 
     .perfil-container {
-        width: 820px;
+        max-width: 1280px;
         height: 1620px;
-        margin-inline: auto;
+        margin-inline: 2rem;
         flex-shrink: 1;
         margin-top: 4rem;
         margin-bottom: 8rem;
@@ -19,17 +19,23 @@
         margin-top: -50rem !important;
     }
 
-    .content-profile h1{
-        font-size: 2rem;
+    .content-profile h1, h3 {
+        text-align: center;
     }
     
-    .content-profile h3 {
-        font-size: 1.2rem;
+    .title-badges {
+        margin-top: 2rem;
     }
 
     .topics-user table{
-        max-width: 800px;
+        max-width: 800px !important;
+        flex-shrink: 2;
         display: flex;
-        flex-direction: column;
+    }
+
+    .topics-user table th, td {
+        text-align: center;
+        padding-inline: 0 !important;
+        padding-block: .5rem;
     }
 }
