@@ -11,6 +11,10 @@
     justify-content: center;
 }
 
+#nav-curso {
+    color: var(--clr-accent-green);
+}
+
 #hero-1 {
     justify-content: flex-start;
     flex-direction: column;
@@ -109,4 +113,41 @@
 
 .img-hero-2 img {
     min-height: 820px;
+}
+
+.trajetoria {
+    display: flex;
+    background-color: var(--clr-primary);
+    align-items: center;
+    justify-content: center;
+    padding-block: 12rem;
+}
+
+.trajetoria img {
+    max-width: 100%;
+}
+
+.item {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: yellow;
+    position: absolute;
+    align-self: flex-end;
+    margin-bottom: 6rem;
+    transition: .2s;
+}
+
+.first {
+    left: 50rem;
+}
+
+.last {
+    right: 50rem;
+}
+
+.item:hover {
+    background-color: blue;
+    width: 50px;
+    height: 50px;
 }
