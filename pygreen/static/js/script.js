@@ -1,7 +1,3 @@
-var loginButton = document.querySelector("#login-button");
-var closeLoginButton = document.querySelector("#close-login")
-var container = document.querySelector("#login-screen");
-
 const slide = document.querySelectorAll('.slide');
 const carouselButtonLeft = document.getElementById('carousel-button-left');
 const carouselButtonRight = document.getElementById('carousel-button-right');
@@ -38,31 +34,6 @@ function prevSlide() {
 carouselButtonLeft.addEventListener('click', prevSlide)
 carouselButtonRight.addEventListener('click', nextSlide)
 
-var loginButton = document.querySelector("#login-button");
-var closeLoginButton = document.querySelector("#close-login")
-var container = document.querySelector("#login-screen");
-
-
-loginButton.addEventListener("click", function() {
-    if(container.style.display === "none") {
-        container.style.display = "block";
-        document.querySelector("#body").classList.add('disable-scroll');
-    } else {
-        container.style.display = "none";
-        document.querySelector("#body").classList.remove('disable-scroll');
-    }
-});
-
-closeLoginButton.addEventListener("click", function() {
-    if(container.style.display === "none") {
-        container.style.display = "block";
-        document.querySelector("#body").classList.add('disable-scroll');
-    } else {
-        container.style.display = "none";
-        document.querySelector("#body").classList.remove('disable-scroll');
-        document.querySelector("#login-screen").classList("fade-out")
-    }
-});
 
 function showMenu() {
     let menuMobile = document.querySelector('.menu-mobile');
@@ -89,8 +60,6 @@ function swapForm() {
 }
 
 btnSignup.addEventListener('click', swapForm)
-
-
 
 var inputLogin = document.querySelector(".password");
 var eye = document.querySelector(".fa-eye");

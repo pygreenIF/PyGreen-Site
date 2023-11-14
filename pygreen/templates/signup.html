@@ -19,23 +19,10 @@
                 <button type="submit" id="btn-registrar" value="registrar">Cadastrar</button>
             </div>
         </form>
-        <form class="form-signup-profile form-profile" action="signup" method="post">
-            <div class="pfp-container">
-                <img class="profile-picture" src="../static/resources/images/pixilart-sprite.png" alt="">
-                <img class="profile-picture on" src="../static/resources/images/pixilart-sprite.png" alt="">
-                <img class="profile-picture" src="../static/resources/images/pixilart-sprite.png" alt="">
-            </div>
-            <div class="inputs">
-                <p>Nome de usuário *</p>
-                <input type="text" name="username">
-            </div>
-            <div class="footing">
-                <button type="submit" id="btn-create-profile" value="Entrar">Entrar</button>
-            </div>
-        </form>
     </div>
 </section>
-
-<script src="https://kit.fontawesome.com/286fab062e.js" crossorigin="anonymous"></script>
-<script src="../static/js/script.js"></script>
 {% endblock forms %}
+{% block javascript %}
+    <script src="https://kit.fontawesome.com/286fab062e.js" crossorigin="anonymous"></script>
+    <script src="../static/js/script.js"></script>
+{% endblock javascript %}

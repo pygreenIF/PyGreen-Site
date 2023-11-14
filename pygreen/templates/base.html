@@ -84,7 +84,37 @@
         </section>
     </footer>
 
-    <script src="https://kit.fontawesome.com/286fab062e.js" crossorigin="anonymous"></script>
-    <script src="../static/js/script.js"></script>
+    <script>
+        var loginButton = document.getElementById("login-button");
+        var closeLoginButton = document.getElementById("close-login")
+        var container = document.getElementById("login-screen");
+
+        function openLogin() {
+            if(container.style.display === "none") {
+                container.style.display = "block";
+                document.getElementById("body").classList.add('disable-scroll');
+            } else {
+                container.style.display = "none";
+                document.getElementById("body").classList.remove('disable-scroll');
+            }
+        };
+
+
+        function closeLogin() {
+            if(container.style.display === "none") {
+                container.style.display = "block";
+                document.getElementById("body").classList.add('disable-scroll');
+            } else {
+                container.style.display = "none";
+                document.getElementById("body").classList.remove('disable-scroll');
+                document.getElementById("login-screen").classList("fade-out")
+            }
+        };
+
+        loginButton.addEventListener("click", openLogin);
+        closeLoginButton.addEventListener("click", closeLogin);
+    </script>
+    {% block javascript %}
+    {% endblock javascript %}
 </body>
 </html>
