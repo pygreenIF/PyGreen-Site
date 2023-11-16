@@ -127,27 +127,24 @@
     max-width: 100%;
 }
 
-.item {
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    background-color: yellow;
+.card {
+    font-family: "Press Start 2P";
     position: absolute;
-    align-self: flex-end;
-    margin-bottom: 6rem;
-    transition: .2s;
+    background-color: var(--clr-accent-white);
+    border-radius: 1rem;
+    display: grid;
+    grid-template-rows: 0fr;
+    grid-template-columns: 0fr 0fr;
+    padding: 1rem;
+    transition: grid-template-rows;
 }
 
-.first {
-    left: 50rem;
+.card > div {
+    overflow: hidden;
 }
 
-.last {
-    right: 50rem;
-}
-
-.item:hover {
-    background-color: blue;
-    width: 50px;
-    height: 50px;
+.card:hover {
+    grid-template-columns: 1fr 1fr;
+    transition: .8s;
+    grid-template-rows: 1fr;
 }
