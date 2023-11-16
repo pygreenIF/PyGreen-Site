@@ -71,7 +71,7 @@ def login():
     
     if(fetchdata):
         if(hashed_password == fetchdata2[0]["senha"]):
-            return redirect(f'/{usuario}')
+            return redirect(f'/user/{usuario}')
     else:
         print('nao foi')
         raise Exception("Ei, deu erro, esse usuario nem existe")
