@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block static %}
+<link rel="stylesheet" href="../static/css/editProfileCSS/styledesktop.css">
+<link rel="stylesheet" href="../static/css/editProflleCSS/stylemobile.css">
+<link rel="stylesheet" href="../static/css/stylebase.css">
+{% endblock static %}
+
+{% block content %}
+<section id="edit-profile">
+    <div class="edit-container">
+        <div class="header-edit-profile">
+            <a href="/"><i class="fa-solid fa-arrow-left"></i></a>
+            <h1>Editar perfil</h1>
+        </div>
+        <div class="content-user-toedit">
+            <img src="../static/resources/images/fotosPerfil/{{ foto_perfil }}" alt="">
+            <div class="inputs-edit-profile">
+                
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
+{% block javascript %}
+    <script src="https://kit.fontawesome.com/286fab062e.js" crossorigin="anonymous"></script>
+    <script src="../static/js/script.js"></script>
+{% endblock javascript %}

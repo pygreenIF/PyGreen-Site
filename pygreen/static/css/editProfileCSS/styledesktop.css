@@ -1,0 +1,38 @@
+#edit-profile {
+    background-color: var(--clr-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-container {
+    width: 60%;
+    height: 1160px;
+    flex-shrink: 1;
+    border: var(--clr-accent-green) solid 5px;
+    border-radius: 1rem;
+    margin-top: 4rem;
+    margin-bottom: 8rem;
+    margin-inline: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 15px 15px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.header-edit-profile{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.header-edit-profile i{
+    font-size: 4rem;
+    margin-left: -250px;
+}
+
+.header-edit-profile h1{
+    font-family: 'Press Start 2P';
+    color: var(--clr-accent-white);
+    font-size: 3rem;
+}
