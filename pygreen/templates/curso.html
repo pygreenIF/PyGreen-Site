@@ -25,6 +25,9 @@
 
 <section id="trajetoria" class="trajetoria">
     <img src="../static/resources/images/trajetoria-3.png" alt=""> 
+    <div class="button-card">
+        <button id="card-button">TESTE</button>
+    </div>
     <div class="card">
         <div class="content-left">
             <div class="card-heading">
@@ -47,12 +50,20 @@
         <div class="content-right">
             <div class="card-heading">
                 <h1><span class="highlight-text">METODOLOGIA PEDAGÓGICA E FERRAMENTAS UTILIZADAS</span></h1>
-                <p>Aula dialogada/Expositiva</p>
-                <p>Utilização do beecrowd ou neps academy</p>
-                <p>Apresentação do episódio 4 do curso de python do curso em vídeo</p>
-                <p>Atividade para casa: assistir aulas #6 e #7 do curso de python do curso em vídeo</p>
             </div>
+            <p>Aula dialogada/Expositiva</p>
+            <p>Utilização do beecrowd ou neps academy</p>
+            <p>Apresentação do episódio 4 do curso de python do curso em vídeo</p>
+            <p>Atividade para casa: assistir aulas #6 e #7 do curso de python do curso em vídeo</p>
         </div>
     </div>
 </section>
+<script>
+var cardButton = document.getElementById("card-button")
+var card = document.querySelector("card")
+
+cardButton.addEventListener('click', function() {
+    card.classList.add("card-on")
+})
+</script>
 {% endblock content %}

@@ -130,21 +130,37 @@
 .card {
     font-family: "Press Start 2P";
     position: absolute;
-    background-color: var(--clr-accent-white);
+    background-color: var(--clr-secondary);
+    color: var(--clr-accent-white);
     border-radius: 1rem;
-    display: grid;
-    grid-template-rows: 0fr;
-    grid-template-columns: 0fr 0fr;
     padding: 1rem;
-    transition: grid-template-rows;
+    display: none;
+    gap: 1rem;
+    max-width: 950px;
+    min-height: 300px;
+    justify-content: space-around;
 }
 
 .card > div {
-    overflow: hidden;
+    padding-inline: 2rem;
+    padding-block: 2rem;
 }
 
-.card:hover {
-    grid-template-columns: 1fr 1fr;
-    transition: .8s;
-    grid-template-rows: 1fr;
+.content-right, .content-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.content-left {
+    border-right: 1px solid var(--clr-accent-white);
+}
+
+.button-card {
+    position: absolute;
+    margin-top: 90rem;
+}
+
+.card-on {
+    display: flex;
 }
