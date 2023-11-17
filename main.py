@@ -42,7 +42,6 @@ def signup():
 
 @app.route("/user/<usuario>")
 def usuario(usuario):
-    
     cursor = db.cursor(dictionary=True)
     cursor.execute(f"SELECT * FROM Pessoa WHERE usuario='{usuario}'")
     fetchdata = cursor.fetchall()
@@ -50,9 +49,11 @@ def usuario(usuario):
         nome = fetchdata[0]['nome']
         pessoaID = fetchdata[0]['pessoaID']
         sobrenome = fetchdata[0]['sobrenome']
+        foto_perfil = fetchdata[0]['foto_perfil']
+        bio_perfil = fetchdata[0]['bio_perfil']
     except:
            render_template('404.html')
-    return render_template('perfilUsuario.html', usuario = usuario, nome=nome, pessoaID=pessoaID, sobrenome=sobrenome)
+    return render_template('perfilUsuario.html', usuario = usuario, nome=nome, pessoaID=pessoaID, sobrenome=sobrenome, foto_perfil=foto_perfil, bio_perfil=bio_perfil)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -71,7 +72,7 @@ def login():
     
     if(fetchdata):
         if(hashed_password == fetchdata2[0]["senha"]):
-            return redirect(f'/{usuario}')
+            return redirect(f'/user/{usuario}')
     else:
         print('nao foi')
         raise Exception("Ei, deu erro, esse usuario nem existe")

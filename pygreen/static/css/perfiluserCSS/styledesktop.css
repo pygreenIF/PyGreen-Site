@@ -6,7 +6,7 @@
 }
 
 .perfil-container {
-    max-width: 1620px;
+    width: 90%;
     height: 820px;
     flex-shrink: 1;
     border: var(--clr-accent-green) solid 5px;
@@ -50,10 +50,12 @@
     align-items: center;
     text-align: center;
     gap: 1.5rem;
+    margin-inline: 2em;
 }
 
 .infos-user img {
     border-radius: 50%;
+    max-width: 100%;
 }
 
 .topics-user {
