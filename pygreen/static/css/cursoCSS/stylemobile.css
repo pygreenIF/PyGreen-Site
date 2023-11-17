@@ -72,4 +72,21 @@
     #hero-2 {
         display: none;
     }
+
+    .card {
+        width: 100%;
+        border-radius: 0;
+        height: auto;
+        margin-inline: auto;
+        grid-template-columns: 1fr;
+    }
+
+    .content-left {
+        border-right: 0;
+        border-bottom: 1px solid var(--clr-accent-white);
+    }
+
+    .content-left, .content-right {
+        margin-inline: 9rem;
+    }
 }

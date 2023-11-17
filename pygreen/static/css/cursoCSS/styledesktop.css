@@ -131,18 +131,20 @@
     position: absolute;
     background-color: var(--clr-secondary);
     color: var(--clr-accent-white);
-    border-radius: 1rem;
+    display: grid;
     padding: 1rem;
-    display: none;
-    gap: 1rem;
-    max-width: 950px;
-    min-height: 300px;
-    justify-content: space-around;
+    border-radius: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    transition: grid-template-rows .6s;
+    width: 950px;
+    height: auto;
 }
 
-.card > div {
+.card div {
     padding-inline: 2rem;
     padding-block: 2rem;
+    overflow: hidden;
 }
 
 .content-right, .content-left {
@@ -155,11 +157,15 @@
     border-right: 1px solid var(--clr-accent-white);
 }
 
-.button-card {
-    position: absolute;
-    margin-top: 90rem;
+/* .card:hover{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    width: 950px;
+    height: auto;
+    gap: 1rem;
+    border-radius: 1rem;
+    padding: 1rem;
 }
 
-.card-on {
-    display: flex;
-}
+.card:hover .content-left {
+} */
