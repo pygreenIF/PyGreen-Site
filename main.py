@@ -39,37 +39,6 @@ def signup():
         db.commit()
         return redirect("/")
 
-
-@app.route("/user/<usuario>")
-def usuario(usuario):
-    cursor = db.cursor(dictionary=True)
-    cursor.execute(f"SELECT * FROM Pessoa WHERE usuario='{usuario}'")
-    fetchdata = cursor.fetchall()
-    try:
-        nome = fetchdata[0]['nome']
-        pessoaID = fetchdata[0]['pessoaID']
-        sobrenome = fetchdata[0]['sobrenome']
-        foto_perfil = fetchdata[0]['foto_perfil']
-        bio_perfil = fetchdata[0]['bio_perfil']
-    except:
-           render_template('404.html')
-    return render_template('perfilUsuario.html', usuario = usuario, nome=nome, pessoaID=pessoaID, sobrenome=sobrenome, foto_perfil=foto_perfil, bio_perfil=bio_perfil)
-
-@app.route("/edit-profile/<usuario>")
-def editProfile(usuario):
-    cursor = db.cursor(dictionary=True)
-    cursor.execute(f"SELECT * FROM Pessoa WHERE usuario='{usuario}'")
-    fetchdata = cursor.fetchall()
-    try:
-        nome = fetchdata[0]['nome']
-        pessoaID = fetchdata[0]['pessoaID']
-        sobrenome = fetchdata[0]['sobrenome']
-        foto_perfil = fetchdata[0]['foto_perfil']
-        bio_perfil = fetchdata[0]['bio_perfil']
-    except:
-           render_template('404.html')
-    return render_template('editProfile.html', usuario = usuario, nome=nome, pessoaID=pessoaID, sobrenome=sobrenome, foto_perfil=foto_perfil, bio_perfil=bio_perfil)
-
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     usuario = request.form.get('usuario')
@@ -91,6 +60,56 @@ def login():
     else:
         print('nao foi')
         raise Exception("Ei, deu erro, esse usuario nem existe")
+
+@app.route("/user/<usuario>")
+def usuario(usuario):
+    cursor = db.cursor(dictionary=True)
+    cursor.execute(f"SELECT * FROM Pessoa WHERE usuario='{usuario}'")
+    fetchdata = cursor.fetchall()
+    try:
+        nome = fetchdata[0]['nome']
+        pessoaID = fetchdata[0]['pessoaID']
+        sobrenome = fetchdata[0]['sobrenome']
+        foto_perfil = fetchdata[0]['foto_perfil']
+        bio_perfil = fetchdata[0]['bio_perfil']
+    except:
+           render_template('404.html')
+    return render_template('perfilUsuario.html', usuario = usuario, nome=nome, pessoaID=pessoaID, sobrenome=sobrenome, foto_perfil=foto_perfil, bio_perfil=bio_perfil)
+
+@app.route("/editar-perfil/<usuario>")
+def editProfile(usuario):
+    cursor = db.cursor(dictionary=True)
+    cursor.execute(f"SELECT * FROM Pessoa WHERE usuario='{usuario}'")
+    fetchdata = cursor.fetchall()
+    try:
+        nome = fetchdata[0]['nome']
+        pessoaID = fetchdata[0]['pessoaID']
+        sobrenome = fetchdata[0]['sobrenome']
+        foto_perfil = fetchdata[0]['foto_perfil']
+        bio_perfil = fetchdata[0]['bio_perfil']
+    except:
+           render_template('404.html')
+    return render_template('editProfile.html', usuario = usuario, nome=nome, pessoaID=pessoaID, sobrenome=sobrenome, foto_perfil=foto_perfil, bio_perfil=bio_perfil)
+
+@app.route("/edit-profile", methods=['GET', 'POST'])
+def edit_profile():
+    nome_editado = request.form.get('edit-name')
+    sobrenome_editado = request.form.get('edit-last-name')
+    usuario_editado = request.form.get('edit-user')
+    bio_editado = request.form.get('edit-bio')
+
+    cursor = db.cursor(dictionary=True)
+    cursor.execute(f"SELECT * FROM Pessoa WHERE usuario='{usuario}'")
+    fetchdata = cursor.fetchall()
+    
+    if fetchdata:
+        post = f"UPDATE Pessoa SET usuario={usuario_editado} WHERE {usuario} = {usuario}"
+        cursor.execute(post)
+        cursor.close()
+        db.commit()
+        return redirect(f"/user/{usuario}")
+    else:
+        raise Exception("Ei, deu erro... Esse usuário não existe DOIDO")
 
 @app.errorhandler(404)
 def page_not_found(e):

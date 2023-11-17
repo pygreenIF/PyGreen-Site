@@ -3,20 +3,39 @@
 <link rel="stylesheet" href="../static/css/editProfileCSS/styledesktop.css">
 <link rel="stylesheet" href="../static/css/editProflleCSS/stylemobile.css">
 <link rel="stylesheet" href="../static/css/stylebase.css">
+<title>Edit Profile | PyGreen</title>
 {% endblock static %}
 
 {% block content %}
 <section id="edit-profile">
     <div class="edit-container">
         <div class="header-edit-profile">
-            <a href="/"><i class="fa-solid fa-arrow-left"></i></a>
+            <a href="/user/{{ usuario }}"><i class="fa-solid fa-arrow-left"></i></a>
             <h1>Editar perfil</h1>
         </div>
         <div class="content-user-toedit">
-            <img src="../static/resources/images/fotosPerfil/{{ foto_perfil }}" alt="">
-            <div class="inputs-edit-profile">
-                
+            <div class="foto-perfil-edit">
+                <a href="/editar-foto-perfil/{{ usuario }}">
+                    <img src="../static/resources/images/fotosPerfil/{{ foto_perfil }}" alt="">
+                    <i style="opacity: 0;" class="fa-solid fa-pen"></i>
+                </a>
             </div>
+            <form id="form-edit-profile" action="edit-profile" method="post">
+                <div class="inputs-edit-profile">
+                    <p>Editar nome</p>
+                    <input value="{{ nome }}" type="text" name="edit-name">
+                    <p>Editar sobrenome</p>
+                    <input value="{{ sobrenome }}" type="text" name="edit-last-name">
+                    <p>Editar usuário</p>
+                    <input value="{{ usuario }}" type="text" name="edit-user">
+                    <p>Editar bio</p>
+                    <textarea value="{{ bio_perfil }}" maxlength="150" id="edit-bio" type="text" name="edit-bio"></textarea>
+                </div>
+                <div class="buttons">
+                    <button type="submit" id="btn-save" value="salvar">Salvar</button>
+                    <!-- <button type="submit" id="btn-drop">Excluir</button> -->
+                </div>
+            </form>
         </div>
     </div>
 </section>

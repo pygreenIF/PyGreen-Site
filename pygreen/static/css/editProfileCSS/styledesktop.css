@@ -7,7 +7,7 @@
 
 .edit-container {
     width: 60%;
-    height: 1160px;
+    min-height: 1200px;
     flex-shrink: 1;
     border: var(--clr-accent-green) solid 5px;
     border-radius: 1rem;
@@ -16,7 +16,6 @@
     margin-inline: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     box-shadow: 15px 15px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
@@ -35,4 +34,96 @@
     font-family: 'Press Start 2P';
     color: var(--clr-accent-white);
     font-size: 3rem;
+}
+
+.content-user-toedit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.foto-perfil-edit img {
+    margin-bottom: 30px;
+    border-radius: 50%;
+    max-width: 100%;
+    transition: .5s;
+    position: relative;
+}
+
+.foto-perfil-edit i {
+    position: absolute;
+    z-index: 50;
+    margin-left: -160px;
+    margin-top: 150px;
+}
+
+.foto-perfil-edit:hover img {
+    opacity: .5;
+}
+
+.foto-perfil-edit:hover i {
+    opacity: 1 !important;
+}
+
+.inputs-edit-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.inputs-edit-profile p {
+    font-family: 'Press Start 2P';
+    font-size: 1.4rem;
+    color: white;
+}
+
+.inputs-edit-profile input {
+    border: 2px solid var(--clr-accent-green);
+    width: 500px;
+    height: 35px;
+}
+
+.inputs-edit-profile textarea {
+    border: 2px solid var(--clr-accent-green);
+    height: 80px;
+    background-color: transparent;
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    color: white;
+    font-size: 1.5rem;
+    padding: 12px 16px 14px;
+    font-family: 'Press Start 2P';
+    overflow: auto;
+    resize: none;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-block: 50px;
+}
+
+.buttons #btn-save, #btn-drop {
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Press Start 2P';
+    color: var(--clr-accent-white);
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.buttons #btn-save {
+    margin-right: 55px;
+
+    background-color: var(--clr-accent-green);
+    border: none;
+}
+
+.buttons #btn-drop {
+    width: 150px;
+    height: 50px;
+    background-color: var(--clr-accent-red);
 }
