@@ -1,5 +1,5 @@
 from pygreen import create_app
-from flask import redirect, request
+from flask import redirect, request, render_template, url_for
 import mysql.connector
 from flask_hashing import Hashing
 
@@ -21,6 +21,7 @@ def signup():
     nome = request.form.get('name')
     sobrenome = request.form.get('last-name')
     senha = request.form.get('password')
+    usuario = request.form.get('username')
 
     hashed_password = hashing.hash_value(senha)
     hashed_password = hashed_password[:16]
@@ -28,19 +29,30 @@ def signup():
     cursor = db.cursor(dictionary=True)
     cursor.execute(f"SELECT * FROM Pessoa WHERE email='{email}'")
     fetchdata = cursor.fetchall()
-
+    
     if fetchdata:
         raise Exception("Ei, deu erro... Já tem esse email ó")
     else:
-        post = f"INSERT INTO Pessoa (tipoID, email, nome, sobrenome, senha) VALUES (1, '{email}', '{nome}', '{sobrenome}', '{hashed_password}')"
+        post = f"INSERT INTO Pessoa (tipoID, email, nome, sobrenome, senha, usuario) VALUES (1, '{email}', '{nome}', '{sobrenome}', '{hashed_password}', '{usuario}')"
         cursor.execute(post)
         cursor.close()
         db.commit()
-        return redirect('/')
+        return redirect("/")
 
-@app.route("/<usuario>")
+
+@app.route("/user/<usuario>")
 def usuario(usuario):
-    return f"Salve, {usuario}!"
+    
+    cursor = db.cursor(dictionary=True)
+    cursor.execute(f"SELECT * FROM Pessoa WHERE usuario='{usuario}'")
+    fetchdata = cursor.fetchall()
+    try:
+        nome = fetchdata[0]['nome']
+        pessoaID = fetchdata[0]['pessoaID']
+        sobrenome = fetchdata[0]['sobrenome']
+    except:
+           render_template('404.html')
+    return render_template('perfilUsuario.html', usuario = usuario, nome=nome, pessoaID=pessoaID, sobrenome=sobrenome)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -59,10 +71,14 @@ def login():
     
     if(fetchdata):
         if(hashed_password == fetchdata2[0]["senha"]):
-            return redirect(f'/{usuario}')
+            return redirect(f'/user/{usuario}')
     else:
         print('nao foi')
         raise Exception("Ei, deu erro, esse usuario nem existe")
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
 
 if __name__ == '__main__':
     app.run(debug=True)

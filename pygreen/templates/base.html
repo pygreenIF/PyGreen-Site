@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="../static/resources/images/icon.ico">
     {% block static %}
     {% endblock static%}
     <title>{{title}} | PyGreen</title>
@@ -18,11 +19,12 @@
                 </div>
                 <form action="login" method="post">
                     <div class="inputs-login">
-                        <input type="text" placeholder="usuário" name="usuario">
-                        <input class="password" type="password" placeholder="senha" name="password">
+                        <input type="text" placeholder="usuário" name="usuario" required>
+                        <input maxlength="16" class="password" type="password" placeholder="senha" name="password" required>
+                    </div>
+                    <div class="forget-anchor">
                         <a class="forget-password" href="">esqueci minha senha</a>
                     </div>
-            
                     <div class="button-start">
                         <button type="submit" value="logar"><p>START</p><i class="fa-solid fa-play"></i></button>
                     </div>
@@ -83,7 +85,37 @@
         </section>
     </footer>
 
-    <script src="https://kit.fontawesome.com/286fab062e.js" crossorigin="anonymous"></script>
-    <script src="../static/js/script.js"></script>
+    <script>
+        var loginButton = document.getElementById("login-button");
+        var closeLoginButton = document.getElementById("close-login")
+        var container = document.getElementById("login-screen");
+
+        function openLogin() {
+            if(container.style.display === "none") {
+                container.style.display = "block";
+                document.getElementById("body").classList.add('disable-scroll');
+            } else {
+                container.style.display = "none";
+                document.getElementById("body").classList.remove('disable-scroll');
+            }
+        };
+
+
+        function closeLogin() {
+            if(container.style.display === "none") {
+                container.style.display = "block";
+                document.getElementById("body").classList.add('disable-scroll');
+            } else {
+                container.style.display = "none";
+                document.getElementById("body").classList.remove('disable-scroll');
+                document.getElementById("login-screen").classList("fade-out")
+            }
+        };
+
+        loginButton.addEventListener("click", openLogin);
+        closeLoginButton.addEventListener("click", closeLogin);
+    </script>
+    {% block javascript %}
+    {% endblock javascript %}
 </body>
 </html>

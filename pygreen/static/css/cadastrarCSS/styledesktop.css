@@ -18,13 +18,16 @@
     margin-top: 3rem;
 }
 
+.top {
+    text-align: center;
+}
 
 .heading {
     margin-block: 6rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 129px;
+    height: auto;
 }
 
 .heading span {
@@ -59,7 +62,7 @@
     background-color: var(--clr-primary);
     border: 0.1rem solid var(--clr-accent-white);
     color: var(--clr-accent-white);
-    margin: 1.2rem 0 2.4rem;
+    margin: 1.2rem 0 2.4rem !important;
     padding-block: 0;
 }
 
@@ -97,4 +100,74 @@
     background-color: var(--clr-accent-white);
     color: var(--clr-accent-black);
     cursor: pointer;
+}
+
+
+.form-signup {
+    margin-top: 3.7rem;
+}
+
+.form-signup .password-input {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.form-signup .password-input input {
+    position: relative !important;
+    z-index: 1;
+}
+
+.form-signup .password-input #eye-button {
+    position: relative !important;
+    margin-top: -1.5rem;
+    z-index: 2;
+}
+
+.password-input button .close{
+    display: none !important;
+}
+
+.password-input button .open{
+    display: block !important;
+}
+
+.on {
+    display: flex;
+    flex-direction: column;
+}
+
+.pfp-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-picture {
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+}
+
+.profile-picture.on {
+    height: 180px;
+    width: 180px;
+}
+
+.form-profile {
+    margin-top: 6.2rem;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.form-profile .inputs {
+    gap: 2.1rem;
+}
+
+.form-profile .inputs, input {
+    margin: 0 !important;
+}
+
+.form-profile .footing {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }

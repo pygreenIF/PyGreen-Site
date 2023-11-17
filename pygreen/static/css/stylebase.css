@@ -15,6 +15,7 @@
     --clr-accent-footer: #272b30;
     --clr-accent-green: #00BB26;
     --clr-accent-white: #FFFFFF;
+    --clr-accent-red: #dd0000;
 }
 
 html {
@@ -147,17 +148,21 @@ i {
     outline: 0;
 }
 
-.inputs-login .password {
-    margin-top: 60px;
-}
-
-.inputs-login .forget-password {
+.forget-anchor .forget-password {
     color: var(--clr-accent-white);
     text-decoration: none;
     font-family: 'Press Start 2P';
     margin-top: 10px;
     width: 52%;
     font-size: 1.1rem;
+}
+
+.forget-anchor {
+    margin: 1rem 4rem;
+}
+
+.password {
+    margin-top: 6rem;
 }
 
 .button-start {

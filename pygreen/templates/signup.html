@@ -10,27 +10,32 @@
         <div class="heading">
             <div class="top">
                 <h1>PY<span>GREEN</span></span></h1>
-                <p>CADASTRE-SE</p>
+                <p id="sub-title-signup" class="sub-title">CADASTRE-SE</p>
             </div>
             <span class="icon"><a href="/"><i class="fa-solid fa-xmark fa-2xl"></a></i>
         </div>
-        <form action="signup" method="post">
+        <form id="form-signup" class="form-signup-profile form-signup on" action="signup" method="post">
             <div class="inputs">
                 <p>Nome *</p>
                 <input type="text" name="name">
                 <p>Sobrenome *</p>
                 <input type="text" name="last-name">
+                <p>Usuario *</p>
+                <input type="text" name="username">
                 <p>Email *</p>
                 <input type="email" name="email">
                 <p>Senha *</p>
-                <input type="password" name="password">
+                <input class="password" maxlength="16" class="password" maxlength="16" type="password" name="password">
             </div>
-        
-            <div class="footing">
-                <a href="/signin">Já tem uma conta?</a>
-                <button type="submit" id="btn-registrar" value="registrar">Cadastrar</button>
-            </div>
+                <div class="footing">
+                    <a href="/signin">Já tem uma conta?</a>
+                    <button type="submit" id="btn-registrar" value="registrar">Cadastrar</button>
+                </div>
         </form>
     </div>
 </section>
 {% endblock content %}
+{% block javascript %}
+    <script src="https://kit.fontawesome.com/286fab062e.js" crossorigin="anonymous"></script>
+    <script src="../static/js/script.js"></script>
+{% endblock javascript %}

@@ -58,12 +58,8 @@
         </div>
     </div>
 </section>
-<script>
-var cardButton = document.getElementById("card-button")
-var card = document.querySelector("card")
-
-cardButton.addEventListener('click', function() {
-    card.classList.add("card-on")
-})
-</script>
 {% endblock content %}
+{% block javascript %}
+    <script src="https://kit.fontawesome.com/286fab062e.js" crossorigin="anonymous"></script>
+    <script src="../static/js/script.js"></script>
+{% endblock javascript %}

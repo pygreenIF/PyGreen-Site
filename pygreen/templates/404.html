@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block static %}
+<link rel="stylesheet" href="../static/css/404error/styledesktop.css">
+<link rel="stylesheet" href="../static/css/404error/stylemobile.css">
+<link rel="stylesheet" href="../static/css/stylebase.css">
+<title>404 Página não encontrada | PyGreen</title>
+{% endblock static %}
+
+{% block content %}
+<section class="not-found">
+    <h1>404</h1>
+    <h2>PÁGINA NÃO ENCONTRADA</h2>
+    <img src="../static/resources/images/macacoNotFound.png" alt="">
+</section>
+{% endblock content %}
+
+{% block javascript %}
+    <script src="https://kit.fontawesome.com/286fab062e.js" crossorigin="anonymous"></script>
+    <script src="../static/js/script.js"></script>
+{% endblock javascript %}
