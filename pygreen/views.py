@@ -21,3 +21,7 @@ def signin():
 @views.route('/chaveAcesso')
 def chaveAcesso():
     return render_template("chaveAcesso.html", title="Chave de acesso")
+
+@views.route('/sobre')
+def sobre():
+    return render_template("sobre.html", title="Sobre")

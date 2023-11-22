@@ -1,0 +1,131 @@
+#about-us {
+    background-color: var(--clr-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Press Start 2P';
+    color: var(--clr-accent-white);
+    flex-direction: column;
+}
+
+#about-us h1 {
+    font-size: 2.8rem;
+    margin-block: 50px;
+}
+
+#about-us h1 span {
+    color: var(--clr-accent-green);
+}
+
+
+ .about-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1550px;
+    justify-content: center;
+
+}
+
+.about-card {
+    max-width: 400px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid var(--clr-accent-white);
+    margin-inline: 50px;
+    margin-block: 50px;
+    box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.about-card:hover {
+    border: 5px solid var(--clr-accent-green);
+    transform: scale(1.05);
+}
+
+.about-card:hover img {
+    filter: brightness(100%);
+}
+
+.about-card:hover .social-media {
+    opacity: 1;
+}
+
+
+.about-card img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-block-start: 15px;
+    filter: brightness(50%);
+    transition: .5s;
+    border-radius: 10px;
+}
+
+.about-card h1 {
+    margin-top: 20px !important;
+    font-size: 1.6rem !important;
+    margin-bottom: 0px !important;
+}
+
+.about-card p {
+    width: 80%;
+    font-size: 1rem;
+    text-align: center;
+    margin-block: 20px;
+}
+
+.about-card .social-media {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    margin-bottom: 20px;
+    opacity: 0;
+    transition: .5s;
+}
+
+.about-card .social-media i {
+    color: var(--clr-accent-green);
+    font-size: 3.5rem;
+    transition: .5s;
+}
+
+.about-card .social-media .fa-github:hover {
+    color: var(--clr-accent-white);
+}
+
+.about-card .social-media .fa-instagram:hover {
+    color: #e95950;
+}
+
+#about-project {
+    background-color: var(--clr-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Press Start 2P';
+    color: var(--clr-accent-white);
+    flex-direction: column;
+}
+
+#about-project h1 {
+    font-size: 2.8rem;
+    margin-block: 50px;
+}
+
+#about-project h1 span {
+    color: var(--clr-accent-green);
+}
+
+#about-project .text-project{
+    margin-bottom: 100px;
+    max-width: 1000px;
+}
+
+#about-project p {
+    text-indent: 5rem;
+    font-size: 1.6rem !important;
+    margin-block: .5rem;
+}
