@@ -25,3 +25,7 @@ def chaveAcesso():
 @views.route('/sobre')
 def sobre():
     return render_template("sobre.html", title="Sobre")
+
+@views.route('/paisoncode')
+def jogo():
+    return render_template("jogo.html", title="Paison Code")
